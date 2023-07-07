@@ -1,0 +1,19 @@
+package main
+import (
+  g "github.com/serpapi/google-search-results-golang"
+)
+
+func main(){
+  parameter := map[string]string{
+    "api_key": "d5f2714bed76ed22c8f7db682a934aa4a9105e827f70feed720f67f6ac50fc49",
+    "engine": "google_maps",
+    "type": "search",
+    "google_domain": "google.com",
+    "q": "dentist",
+    "hl": "en",
+    "ll": "@40.7455096,-74.0083012,14z",
+  }
+
+  search := g.NewGoogleSearch(parameter, "d5f2714bed76ed22c8f7db682a934aa4a9105e827f70feed720f67f6ac50fc49")
+  results, err := search.GetJSON()
+}
