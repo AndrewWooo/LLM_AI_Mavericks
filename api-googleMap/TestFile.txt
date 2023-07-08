@@ -1,0 +1,87 @@
+http://127.0.0.1:5000/search?doctorType=orthodontists&address=dallas%20downtown,%20dallas,%20tx
+
+results:
+{
+  "orthodontists": [
+    {
+      "address": "1809 Skillman St, Dallas, TX 75206",
+      "name": "Lakewood Orthodontics"
+    },
+    {
+      "address": "4611 Columbia Ave #104, Dallas, TX 75226",
+      "name": "Columbia Dental and Orthodontics"
+    },
+    {
+      "address": "2325 N Fitzhugh Ave Suite 200, Dallas, TX 75204",
+      "name": "Knox Village Dentistry & Orthodontics"
+    },
+    {
+      "address": "2014 Skillman St, Dallas, TX 75214",
+      "name": "Top Smile Orthodontics and Pediatrics"
+    },
+    {
+      "address": "1935 Medical District Dr, Dallas, TX 75235",
+      "name": "Dr. Yong Jong Park, DDS"
+    },
+    {
+      "address": "2350 N Stemmons Fwy Suite F4020, Dallas, TX 75207",
+      "name": "Children's Health Orthodontics"
+    },
+    {
+      "address": "907 Pollard St Suite 110, Dallas, TX 75208",
+      "name": "Smile Design Orthodontnics"
+    },
+    {
+      "address": "3302 Gaston Ave, Dallas, TX 75246",
+      "name": "Campbell Phillip M DDS"
+    },
+    {
+      "address": "3302 Gaston Ave, Dallas, TX 75246",
+      "name": "Dr. Aaron Crossley"
+    },
+    {
+      "address": "5334a Ross Ave Ste 800, Dallas, TX 75206",
+      "name": "Jefferson Dental & Orthodontics"
+    },
+    {
+      "address": "2350 N Stemmons Fwy Suite F4020, Dallas, TX 75207",
+      "name": "Yong Jong Park, DDS"
+    },
+    {
+      "address": "2014 Skillman St, Dallas, TX 75206",
+      "name": "Dr. Nima Rohani"
+    },
+    {
+      "address": "3302 Gaston Ave, Dallas, TX 752462013",
+      "name": "Chad Capps"
+    },
+    {
+      "address": "6333 E Mockingbird Ln #275, Dallas, TX 75214",
+      "name": "Ellis Orthodontics"
+    },
+    {
+      "address": "5321 E Mockingbird Ln Suite 210, Dallas, TX 75206",
+      "name": "MINT orthodontics | Dallas, TX"
+    },
+    {
+      "address": "6401 Hillcrest Ave Suite 200, Dallas, TX 75205",
+      "name": "LVL Orthodontics"
+    },
+    {
+      "address": "817 Jefferson Blvd, Dallas, TX 75208",
+      "name": "Brident Dental & Orthodontics"
+    },
+    {
+      "address": "6465 E Mockingbird Ln Suite 371, Dallas, TX 75214",
+      "name": "Ferrari Orthodontics"
+    },
+    {
+      "address": "817 Jefferson Blvd Suite 130, Dallas, TX 75208",
+      "name": "Dr. Hardik T. Kapadia, DMD"
+    },
+    {
+      "address": "7001 Preston Rd #222, Dallas, TX 75205",
+      "name": "Harris Orthodontics"
+    }
+  ]
+}
