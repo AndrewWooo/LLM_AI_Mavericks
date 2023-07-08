@@ -2,6 +2,11 @@ import os
 import json
 import openai
 from fuzzywuzzy import fuzz
+# api 
+from flask import Flask, request, jsonify
+# from flask.globals import _request_ctx_stack
+
+app = Flask(__name__)
 
 class DoctorCategoryAssistant:
     def __init__(self):
@@ -122,62 +127,73 @@ assistant.messages.append({"role": "system", "content": f"smoke or not: {patient
 assistant.messages.append({"role": "system", "content": f"Patient Age: {patient_info['age']}"})
 assistant.messages.append({"role": "system", "content": f"Patient Gender: {patient_info['gender']}"})
 assistant.messages.append({"role": "system", "content": f"Patient Medical Records: {patient_info['medical_records']}"})
+# Initialize the assistant messages
+assistant = {
+    "messages": []
+}
+# Define the chat API endpoint
+@app.route('/chat', methods=['POST'])
+def chat():
+    print("Assistant: Hello, what brought you here today?")
+    # patient_input = input("Patient: ")
+    patient_input = request.json['patient_input']
 
-print("Assistant: Hello, what brought you here today?")
-patient_input = input("Patient: ")
-
-# Add the patient's input to the conversation
-assistant.messages.append({
-    "role": "user",
-    "content": patient_input
-})
-
-turns = 0
-# Loop until a category is found
-while True:
-    # Generate a response from the model
-    response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo-0613',
-        # model="gpt-3.5-turbo-16k",
-        messages=assistant.messages,
-        max_tokens=128,
-        n=1,
-        stop=None,
-        temperature=0.6,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
-    )
-
-    # Extract the assistant's reply
-    assistant_reply = response.choices[0].message['content']
-
-    # Print the assistant's reply
-    print("Assistant:", assistant_reply)
-
-
-    # Extract the predicted category from the assistant's final reply
-    predicted_category = assistant.predict_category(assistant_reply)
-    # Break the loop if a category has been found
-    if predicted_category != "Unknown":
-        break
-
-    # Get additional patient input
-    patient_input = input("Patient: ")
-
-    # Add assistant and patient responses to the conversation
-    assistant.messages.append({
-        "role": "assistant",
-        "content": assistant_reply
-    })
-
-    assistant.messages.append({
+    # Add the patient's input to the conversation
+    # assistant.messages.append({
+    assistant['messages'].append({
         "role": "user",
         "content": patient_input
     })
+    # Loop until a category is found
+    while True:
+        # Generate a response from the model
+        response = openai.ChatCompletion.create(
+            model='gpt-3.5-turbo-0613',
+            # model="gpt-3.5-turbo-16k",
+            messages=assistant.messages,
+            max_tokens=128,
+            n=1,
+            stop=None,
+            temperature=0.6,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
+        )
 
-    # Increment the turn counter
-    turns += 1
+        # Extract the assistant's reply
+        assistant_reply = response.choices[0].message['content']
+
+        # Print the assistant's reply
+        print("Assistant:", assistant_reply)
+        # Add assistant and patient responses to the conversation
+        # assistant.messages.append({
+        assistant['messages'].append({
+            "role": "assistant",
+            "content": assistant_reply
+        })
+        # Extract the predicted category from the assistant's final reply
+        predicted_category = assistant.predict_category(assistant_reply)
+        # Break the loop if a category has been found
+        if predicted_category != "Unknown":
+            jsonify({"assistant_reply": assistant_reply, "waiting_for_input": predicted_category == "Patient Input"})
+            break
+
+        # Get additional patient input
+        # patient_input = input("Patient: ")
+        # Extract patient input from the request body
+        # If the loop continues, check if additional patient input is available
+        if 'patient_input' in request.json:
+            patient_input = request.json['patient_input']
+            # Add patient input to the conversation
+            assistant['messages'].append({
+                "role": "user",
+                "content": patient_input
+            })
+
+
+if __name__ == '__main__':
+    # with app.app_context():
+      app.run()
 
 # Print the predicted category
 print("Predicted category:", predicted_category)
