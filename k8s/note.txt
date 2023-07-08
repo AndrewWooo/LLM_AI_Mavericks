@@ -1,0 +1,5 @@
+1. manually load the docker image to the kind cluster:
+kind load docker-image googmap_api:latest --name chatgpt-project
+
+2. portforward 5000 on the service to local machine 5000:
+kubectl port-forward service/googmap-api-service 5000:5000

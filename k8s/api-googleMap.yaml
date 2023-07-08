@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: googmap-api-deployment
+  labels:
+    app: googmap-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: googmap-api
+  template:
+    metadata:
+      labels:
+        app: googmap-api
+    spec:
+      containers:
+        - name: googmap-api-container
+          image: googmap_api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: googmap-api-service
+spec:
+  type: NodePort
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30500
+  selector:
+    app: googmap-api
