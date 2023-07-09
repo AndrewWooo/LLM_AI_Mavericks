@@ -4,26 +4,96 @@
     padding: 0;
 }
 
-*, html {
-    --primaryGradient: linear-gradient(93.12deg, #2bd7f9 0.52%, #2bd7f9 100%);
-    --secondaryGradient: linear-gradient(268.91deg, #2bd7f9 -2.14%, #2bd7f9 99.69%);
-    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --light: 300;
-    --regular: 400;
-    --semiBold: 600;
-    --extraLight: 300;
-    --italic: 300;
-    --primary: #2bd7f9;
-}
-
-/* 300;0,400;0,600;1,300 */
-
 body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 100%;
     background: #F1F1F1;
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #581B98 0.52%, #9C1DE7 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #581B98 -2.14%, #9C1DE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
+}
+
+/* CHATBOX
+=============== */
+.chatbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background: #eee;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+
+}
+
+/* BUTTON */
+.chatbox__button {
+    text-align: right;
+}
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: sticky;
+    top: 0;
+    background: orange;
+}
+
+/* MESSAGES */
+.chatbox__messages {
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    background: orange;
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
 }
 
 .chatbox__support {
@@ -69,7 +139,7 @@ body {
 
 .messages__item {
     margin-top: 10px;
-    background: #E0E0E0; 
+    background: #E0E0E0;
     padding: 8px 12px;
     max-width: 70%;
 }
@@ -104,10 +174,11 @@ body {
 }
 
 .chatbox__footer input {
+    width: 80%;
     border: none;
     padding: 10px 10px;
     border-radius: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 .chatbox__send--footer {
