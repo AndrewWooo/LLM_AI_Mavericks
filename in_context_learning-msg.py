@@ -193,7 +193,7 @@ def chat():
 
 if __name__ == '__main__':
     # with app.app_context():
-      app.run()
+      app.run(host='0.0.0.0': port=5000)
 
 # Print the predicted category
 print("Predicted category:", predicted_category)
