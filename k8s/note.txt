@@ -3,3 +3,6 @@ kind load docker-image googmap_api:latest --name chatgpt-project
 
 2. portforward 5000 on the service to local machine 5000:
 kubectl port-forward service/googmap-api-service 5000:5000
+
+3. get into the alpine image:
+kubectl exec -it call-googmap-api-deployment-546f784b4-52wnw -- /bin/sh

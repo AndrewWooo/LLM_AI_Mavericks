@@ -5,7 +5,7 @@ metadata:
   labels:
     app: googmap-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: googmap-api
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: googmap-api-service
+  name: googmap-service
 spec:
   type: NodePort
   ports:
@@ -34,3 +34,23 @@ spec:
       nodePort: 30500
   selector:
     app: googmap-api
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: call-googmap-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: call-googmap-api
+  template:
+    metadata:
+      labels:
+        app: call-googmap-api
+    spec:
+      containers:
+        - name: call-googmap-api-container
+          image: call_googmap_api:latest
+          imagePullPolicy: IfNotPresent
