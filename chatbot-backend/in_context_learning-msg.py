@@ -5,6 +5,8 @@ from fuzzywuzzy import fuzz
 # api 
 from flask import Flask, request, jsonify
 # from flask.globals import _request_ctx_stack
+api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = api_key
 
 app = Flask(__name__)
 
@@ -189,7 +191,6 @@ def chat():
                 "role": "user",
                 "content": patient_input
             })
-
 
 if __name__ == '__main__':
     # with app.app_context():
