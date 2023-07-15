@@ -88,7 +88,6 @@ def get_response(msg):
     # Extract the predicted category from the assistant's final reply
     predicted_category = assistant.predict_category(assistant_reply)
     if predicted_category != "Unknown":
-        categoryFinded = True
         choose_doctor="Do you want to make an appt. with a [" + predicted_category+ "] Medical Doctor? (y/n)"
         return choose_doctor
     else:
