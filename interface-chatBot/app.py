@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify
+"""
 import sys
 from pathlib import Path
 # Add the parent directory to the Python module search path
 sys.path.append(str(Path(__file__).resolve().parent.parent / 'chatbot-backend'))
+"""
 from in_context_learning_msg_api import get_response
 
 app = Flask(__name__)
