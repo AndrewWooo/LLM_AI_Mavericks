@@ -109,3 +109,46 @@ if __name__ == "__main__":
 
         resp = get_response(sentence)
         print(resp)
+
+"""
+
+assistant_reply
+# appointment_or_not = input("Patient: ")
+patient_input = request.json['patient_input']
+
+if appointment_or_not == 'n':
+  # print("goodbye")
+  jsonify({"assistant_reply": "Since you do not need appointment. It is time to say Goodbye"})
+else:
+  doctor_recom = search_doctors(predicted_category, patient_address)
+  dr_name = doctor_recom[0]
+  err = 0
+  while dr_name == 'error':
+    if err > 2:
+      # print(f"Assistant:It seems the system has some issue, please drop this chat to find other way to solve your problem")
+      jsonify({"assistant_reply": f"Assistant:It seems the system has some issue, please drop this chat to find other way to solve your problem"})
+    # print(f"Assistant: It seems that your address is not right, please input your address again.")
+    jsonify({"assistant_reply": "It seems that your address is not right, please input your address again."})
+    # new_address = input("Patient: ")
+    patient_input = request.json['patient_input']
+    doctor_recom = search_doctors(predicted_category, patient_address)
+    err += 1
+  dr_address = doctor_recom[1]
+  # print(f"""The clinic/doctor name is {dr_name}, \n
+  #   whose address is \n 
+  #   {dr_address}""")
+  jsonify({"assistant_reply": f"""The clinic/doctor name is {dr_name}, \n
+    whose address is \n 
+    {dr_address}"""})
+  # print(f"Assistant: You are going to receive a confirmation email about your appointment")
+  jsonify({"assistant_reply": "You are going to receive a confirmation email about your appointment"})
+  subject = "Doctor Appoint confirmation"
+  message = f"""{assistant_reply} \n
+              The clinic/doctor's name is {dr_name}, whose address is {dr_address} \n
+              at time: {patient_free_time}
+              """
+  send_email(sender_email, sender_password, receiver_email, subject, message)
+
+jsonify({"assistant_reply": "You are all set. Goodbye!"})
+# print("Assistant: Goodbye!")
+"""
