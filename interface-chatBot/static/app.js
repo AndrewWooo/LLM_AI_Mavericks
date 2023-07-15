@@ -7,7 +7,7 @@ class Chatbox {
         }
 
         this.state = false;
-        this.messages = [];
+        this.messages = [{ name: "Mav", message: "Hi, I'm Mav, your AI-health advisor. What brought you here today?" }];
     }
 
     display() {

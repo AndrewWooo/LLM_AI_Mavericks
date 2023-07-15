@@ -5,9 +5,9 @@ from fuzzywuzzy import fuzz
 # api 
 from flask import Flask, request, jsonify
 
-from serpapi import GoogleSearch
+#from serpapi import GoogleSearch
 # import requests
-from geopy.geocoders import Nominatim
+#from geopy.geocoders import Nominatim
 
 import smtplib
 import ssl
