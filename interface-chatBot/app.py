@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 # Add the parent directory to the Python module search path
 sys.path.append(str(Path(__file__).resolve().parent.parent / 'LLM_Dev'))
-from few_shot import get_response
+
 
 
 app = Flask(__name__)
