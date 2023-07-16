@@ -1,0 +1,9 @@
+{
+  "age": 45,
+  "gender": "female",
+  "medical_records": "History of heart disease, prescribed medication: beta-blockers",
+  "smoke": "Yes",
+  "receiver_email": "",
+  "patient_address": "123 Main St, New York, NY 10001",
+  "patient_free_time": "Monday, Wednesday, Friday 9am-12pm"
+}
