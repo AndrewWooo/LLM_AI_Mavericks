@@ -17,8 +17,8 @@ from email.mime.multipart import MIMEMultipart
 """
 from backend_utilities import *
 
-#api_key = os.environ.get('OPENAI_API_KEY')
-openai.api_key = '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'
+api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = api_key
 """
 serpapi_key = os.environ.get('SERPAPI_KEY')
 sender_email = os.environ.get('SENDER_EMAIL')

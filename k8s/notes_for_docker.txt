@@ -1,0 +1,2 @@
+1. make a Dockerfile
+2. docker build -t your-image-name .

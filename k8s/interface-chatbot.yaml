@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: interface-chatbot-deployment
+  labels:
+    app: interface-chatbot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: interface-chatbot
+  template:
+    metadata:
+      labels:
+        app: interface-chatbot
+    spec:
+      containers:
+        - name: interface-chatbot-container
+          image: interface-chatbot:latest
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: openai-key
+                  key: OPENAI_API_KEY
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: interface-chatbot-service
+spec:
+  type: NodePort
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30500
+  selector:
+    app: interface-chatbot

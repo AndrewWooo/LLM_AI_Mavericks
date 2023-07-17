@@ -6,3 +6,22 @@ kubectl port-forward service/googmap-api-service 5000:5000
 
 3. get into the alpine image:
 kubectl exec -it call-googmap-api-deployment-546f784b4-52wnw -- /bin/sh
+
+4. create a secret for the api-key:
+kubectl create secret generic openai-key --from-literal=OPENAI_API_KEY='sk-JQnbBxxxxxxxxxxxx'
+
+5. mount the secret:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: your-pod
+spec:
+  containers:
+  - name: your-container
+    image: your-image-name
+    env:
+      - name: OPENAI_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: openai-key
+            key: OPENAI_API_KEY
