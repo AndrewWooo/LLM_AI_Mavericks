@@ -105,11 +105,10 @@ assistant.messages.append({"role": "system", "content": f"Patient Age: {patient_
 assistant.messages.append({"role": "system", "content": f"Patient Gender: {patient_info['gender']}"})
 assistant.messages.append({"role": "system", "content": f"Patient Medical Records: {patient_info['medical_records']}"})
 
-
-def get_response(msg, turns):
+def get_response(msg):
     """Returns the assistant's response to the user's message"""
-    #global turns
     # Add the user's message to the conversation
+    #prompt = f'{chat_log}user: {msg}\nassistant:'
     assistant.messages.append({
         "role": "user",
         "content": msg
@@ -127,7 +126,6 @@ def get_response(msg, turns):
         frequency_penalty=0.0,
         presence_penalty=0.0
     )
-
     # Extract the assistant's reply
     assistant_reply = response.choices[0].message['content']
     # Add the assistant's reply to the conversation
@@ -135,14 +133,12 @@ def get_response(msg, turns):
         "role": "assistant",
         "content": assistant_reply
     })
-    turns += 1
     # Extract the predicted category from the assistant's final reply
     predicted_category = assistant.predict_category(assistant_reply)
     if predicted_category != "Unknown":
         choose_doctor="Do you want to make an appt. with a [" + predicted_category+ "] Medical Doctor? (y/n)"
-        return choose_doctor
-    else:
-        return assistant_reply
+        assistant_reply = assistant_reply + "\n\n" + choose_doctor
+    return assistant_reply
 
 
 

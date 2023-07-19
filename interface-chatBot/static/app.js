@@ -7,7 +7,7 @@ class Chatbox {
         }
 
         this.state = false;
-        this.messages = [{ name: "Mav", message: "Hi, I'm Mav, your AI-health advisor. What brought you here today?" }];
+        this.messages = [{ name: "Mav", message: "Hi, what brought you here today?" }];
     }
 
     display() {
@@ -46,7 +46,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('http://127.0.0.1:5000/chat', {
+        fetch('http://127.0.0.1:5000/chatOnline', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
