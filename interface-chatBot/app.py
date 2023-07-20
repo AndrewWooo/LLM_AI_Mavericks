@@ -1,47 +1,64 @@
-from flask import Flask, render_template, request, jsonify, session
-from in_context_learning_msg_api import get_response
-from backend_utilities import search_doctors, send_email, DoctorCategoryAssistant
-#from twilio.twiml.messaging_response import MessagingResponse
+import re
+from flask import Flask, render_template, request, jsonify, session, redirect
+from flask_session import Session
+from 
+from backend_utilities import get_response,search_doctors, send_email, DoctorCategoryAssistant
+from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
-app.secret_key = 'my_secret_key'
+app.config['SECRET_KEY'] = 'secret_key!'
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 
 # render the index.html page
-@app.get('/') 
-def index_get():
+@app.route("/", methods=["GET", "POST"]) 
+def index():
     return render_template('index.html')
 
+# store the user name, age, email, address... info  in session
+# session act as global variable here
+@app.route("/form", methods=["POST", "GET"])
+def form():
+    if request.method == "POST":
+        # record the user name
+        session["name"] = request.form.get("name")
+        #session["age"] = request.form.get("age")
+        #....
+        # store all the info in database
+        #storeInfo()
 
+        # redirect to the main page
+        return redirect("/")
+    return render_template("form.html")
+
+# chatbot interface for online chat
 @app.post('/chatOnline')
-def predict():
-    
+def chat():
     text = request.get_json().get('message')
-    
-    chat_log = session.get('chat_log')
-    if chat_log is None:
-        chat_log = '''assistant: Hi, what brought you here today?'''
-    if "(y/n)" in chat_log[-10:]:
-        if text.lower() == 'y':
-            # code to search doctors and send email
-            # search_doctors()
-            # send_email()
-            # return appropriate response
-            message = {'answer': "Appointment confirmed!"}
-            return jsonify(message), 200
-        else: # text.lower() == 'n'
-            message = {'answer': "Goodbye!"}
-            return jsonify(message), 200
     #get response from model
     response = get_response(text)
-    #store the chat log
-    session['chat_log'] = f'{chat_log}user: {text}\nassistant: {response}\n'
     # jsonify the response
     message = {'answer': response}
     return jsonify(message)
 
+# chatbot interface for using SMS
+@app.post('/chatSMS')
+def chatSMS():
+    incoming_msg = request.values['Body']
+    # use phone number as session_id
+    session_id = request.values['From']
+    r = MessagingResponse()
+    """
+    msg = get_response(incoming_msg)
+    r.message(msg)
+    """
+    # below is for testing
+    r.message('this is the response')
+    return str(r)
 
-
-
+#def storeInfo():
+    
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=False)
