@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session
 from backend_utilities import *
 import openai
 import os
@@ -27,68 +27,209 @@ conversation = [
     ("AI", "Goodbye.")
 ]
 
-@app.route('/')
-def home():
-    # Start the conversation with the bot's greeting
-    user_responses.append(('AI', conversation[step][1]))
-    return render_template('home.html', messages=user_responses)
-
-@app.route('/process', methods=['POST'])
-def process():
-    global step, user_responses
-    user_input = request.form['user_input']
-    user_responses.append(('User', user_input))
-
-    # Increment the step right after getting user input
-    step += 1
-
-    # Check user input for email and appointment response
-    if step == 3:  # User has entered email
-        if "@" not in user_input:
-            step -= 1
-            return jsonify("Sorry, I didn't understand your email address. Please provide a valid email.")
-    elif step == 5:  # User has answered appointment question
-        if user_input.lower() not in ['y', 'n']:
-            step -= 1
-            return jsonify("Please type 'y' or 'n'.")
-        elif user_input.lower() == 'y':
-            return jsonify(conversation[6][1])  # Agent helps with the appointment
-        else:  # 'n'
-            return jsonify(conversation[7][1])  # Agent says goodbye
-
-    # Send the agent's next message if we are not at the end of the conversation
-    if step < len(conversation):
-        return jsonify(conversation[step][1])
-    else:
-        return jsonify("End of Conversation")
-
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
     patient_input = data.get('patient_input')
+
+    assistant_reply, predicted_category = doctor_chat(patient_input)
+
+    return jsonify({"assistant_reply": assistant_reply, "predicted_category": predicted_category}), 200
+
+
+@app.route('/process', methods=['POST'])
+def process():
+    user_input = request.get_json().get('user_input')
+
+    if "step" not in session:
+        session['step'] = 0
+        session['user_responses'] = [('AI', conversation[0][1])]
+        return jsonify(conversation[session['step']][1])
+
+    session['user_responses'].append(('User', user_input))
+    session['step'] += 1
+
+    if session['step'] == 3:
+        if "@" not in user_input:
+            session['step'] -= 1
+            return jsonify("Sorry, I didn't understand your email address. Please provide a valid email.")
+    elif session['step'] == 5:
+        if user_input.lower() not in ['y', 'n']:
+            session['step'] -= 1
+            return jsonify("Please type 'y' or 'n'.")
+        elif user_input.lower() == 'y':
+            assistant_reply, predicted_category = doctor_chat("I would like to make an appointment")
+            return jsonify({"assistant_reply": assistant_reply, "predicted_category": predicted_category})
+        else:  # 'n'
+            return jsonify(conversation[7][1])  # Agent says goodbye
+
+    if session['step'] < len(conversation):
+        return jsonify(conversation[session['step']][1])
+    else:
+        return jsonify("End of Conversation")
+
+
+def doctor_chat(patient_input):
     assistant = DoctorCategoryAssistant()
     assistant.messages.append({
         "role": "user",
         "content": patient_input
     })
 
-    # Generate a response from the model
-    response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo-0613',
-        messages=assistant.messages,
-        max_tokens=128,
-        n=1,
-        stop=None,
-        temperature=0.6,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
-    )
+    turns = 0
+    predicted_category = "Unknown"
 
-    # Extract the assistant's reply
-    assistant_reply = response.choices[0].message['content']
+    while predicted_category == "Unknown" and turns < 5:
+        response = openai.ChatCompletion.create(
+            model='gpt-3.5-turbo-0613',
+            messages=assistant.messages,
+            max_tokens=128,
+            n=1,
+            stop=None,
+            temperature=0.6,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
+        )
 
-    return jsonify({"assistant_reply": assistant_reply}), 200
+        assistant_reply = response.choices[0].message['content']
+        predicted_category = assistant.predict_category(assistant_reply)
+
+        assistant.messages.append({
+            "role": "assistant",
+            "content": assistant_reply
+        })
+
+        if predicted_category == "Unknown":
+            assistant.messages.append({
+                "role": "user",
+                "content": assistant_reply
+            })
+
+        turns += 1
+
+    return assistant_reply, predicted_category
+
+@app.route('/')
+def home():
+    # Start the conversation with the bot's greeting
+    user_responses.append(('AI', conversation[step][1]))
+    return render_template('home.html', messages=user_responses)
+
+# @app.route('/process', methods=['POST'])
+# def process():
+#     global step, user_responses
+#     user_input = request.form['user_input']
+#     user_responses.append(('User', user_input))
+#
+#     # Increment the step right after getting user input
+#     step += 1
+#
+#     # Check user input for email and appointment response
+#     if step == 3:  # User has entered email
+#         if "@" not in user_input:
+#             step -= 1
+#             return jsonify("Sorry, I didn't understand your email address. Please provide a valid email.")
+#     elif step == 5:  # User has answered appointment question
+#         if user_input.lower() not in ['y', 'n']:
+#             step -= 1
+#             return jsonify("Please type 'y' or 'n'.")
+#         elif user_input.lower() == 'y':
+#             return jsonify(conversation[6][1])  # Agent helps with the appointment
+#         else:  # 'n'
+#             return jsonify(conversation[7][1])  # Agent says goodbye
+#
+#     # Send the agent's next message if we are not at the end of the conversation
+#     if step < len(conversation):
+#         return jsonify(conversation[step][1])
+#     else:
+#         return jsonify("End of Conversation")
+
+# @app.route('/chat', methods=['POST'])
+# def chat():
+#     data = request.get_json()
+#     patient_input = data.get('patient_input')
+#     assistant = DoctorCategoryAssistant()
+#     assistant.messages.append({
+#         "role": "user",
+#         "content": patient_input
+#     })
+#
+#     # Generate a response from the model
+#     response = openai.ChatCompletion.create(
+#         model='gpt-3.5-turbo-0613',
+#         messages=assistant.messages,
+#         max_tokens=128,
+#         n=1,
+#         stop=None,
+#         temperature=0.6,
+#         top_p=1.0,
+#         frequency_penalty=0.0,
+#         presence_penalty=0.0
+#     )
+#
+#     # Extract the assistant's reply
+#     assistant_reply = response.choices[0].message['content']
+#
+#     return jsonify({"assistant_reply": assistant_reply}), 200
+
+# @app.route('/chat', methods=['POST'])
+# def chat():
+#     data = request.get_json()
+#     patient_input = data.get('patient_input')
+#
+#     # Create an instance of the DoctorCategoryAssistant class
+#     assistant = DoctorCategoryAssistant()
+#
+#     # Start the conversation with the patient's input
+#     assistant.messages.append({
+#         "role": "user",
+#         "content": patient_input
+#     })
+#
+#     turns = 0
+#     predicted_category = "Unknown"
+#
+#     # Loop until a category is found
+#     while predicted_category == "Unknown" and turns < 5:  # limit to 5 turns to prevent infinite loop
+#         # Generate a response from the model
+#         response = openai.ChatCompletion.create(
+#             model='gpt-3.5-turbo-0613',
+#             messages=assistant.messages,
+#             max_tokens=128,
+#             n=1,
+#             stop=None,
+#             temperature=0.6,
+#             top_p=1.0,
+#             frequency_penalty=0.0,
+#             presence_penalty=0.0
+#         )
+#
+#         # Extract the assistant's reply
+#         assistant_reply = response.choices[0].message['content']
+#
+#         # Extract the predicted category from the assistant's final reply
+#         predicted_category = assistant.predict_category(assistant_reply)
+#
+#         # Add assistant and patient responses to the conversation
+#         assistant.messages.append({
+#             "role": "assistant",
+#             "content": assistant_reply
+#         })
+#
+#         # If a category has not been found, generate a new assistant reply
+#         if predicted_category == "Unknown":
+#             # This uses the last reply from the assistant to continue the conversation
+#             assistant.messages.append({
+#                 "role": "user",
+#                 "content": assistant_reply
+#             })
+#
+#         # Increment the turn counter
+#         turns += 1
+#
+#     # Return the final assistant reply and the predicted category
+#     return jsonify({"assistant_reply": assistant_reply, "predicted_category": predicted_category}), 200
 
 @app.route('/create_patient', methods=['POST'])
 def create_patient():
