@@ -178,7 +178,7 @@ if appointment_or_not == 'n':
   print("goodbye")
 else:
   doctor_recom = search_doctors(predicted_category, patient_address)
-  dr_name = doctor_recom[0]
+  dr_name = doctor_recom[0] #mark 
   err = 0
   while dr_name == 'error':
     if err > 2:
@@ -187,7 +187,7 @@ else:
     new_address = input("Patient: ")
     doctor_recom = search_doctors(predicted_category, patient_address)
     err += 1
-  dr_address = doctor_recom[1]
+  dr_address = doctor_recom[1] # mark
   print(f"""The clinic/doctor name is {dr_name}, \n
     whose address is \n 
     {dr_address}""")

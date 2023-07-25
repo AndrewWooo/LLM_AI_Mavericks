@@ -1,13 +1,9 @@
 import os
-import json
 import openai
 from fuzzywuzzy import fuzz
-# api 
-from flask import Flask, request, jsonify
 
-#from serpapi import GoogleSearch
-# import requests
-#from geopy.geocoders import Nominatim
+from serpapi import GoogleSearch
+from geopy.geocoders import Nominatim
 
 import smtplib
 import ssl
@@ -17,14 +13,13 @@ from email.mime.multipart import MIMEMultipart
 
 
 serpapi_key = os.environ.get('SERPAPI_KEY')
-
 api_key = os.environ.get('OPENAI_API_KEY')
 openai.api_key = api_key
 
-# sender_email = os.environ.get('SENDER_EMAIL')
-# sender_password = os.environ.get('SENDER_PIN')
+sender_email = os.environ.get('SENDER_EMAIL')
+sender_password = os.environ.get('SENDER_PIN')
 
-def send_email(sender_email, sender_password, receiver_email, subject, message):
+def send_email(receiver_email, subject, message):
     # Set up the SMTP server
     smtp_server = 'smtp-mail.outlook.com'
     smtp_port = 587
@@ -43,7 +38,6 @@ def send_email(sender_email, sender_password, receiver_email, subject, message):
         server.login(sender_email, sender_password)
         server.send_message(msg)
 
-def search_doctors(doctorType: str, address: str):
     """Returns are the doctor's name and address, both are strings. \
     use this when the agent want to help user to make an appointment with a doctor and \
     after the user provide the one's address, \
@@ -51,6 +45,8 @@ def search_doctors(doctorType: str, address: str):
     second one is address: str.\
     it also return errors if Missing required parameters \
     or Geocoding failed. Invalid address or API error"""
+
+def search_doctors(doctorType: str, address: str):
     top_k = 1
     if not doctorType or not address:
       return 'error', 'Missing required parameters.'
@@ -182,4 +178,51 @@ class DoctorCategoryAssistant:
                 max_ratio = ratio
                 predicted_category = category
         return predicted_category if max_ratio > 80 else "Unknown"
+
+#init the assistant object
+assistant = DoctorCategoryAssistant()
+
+def addSystemMessage(gender, age, smoke, medical_records):
+    # System message
+    assistant.messages.append({"role": "system", "content": assistant.logic})
+    assistant.messages.append({"role": "system", "content": f"Patient Gender: {gender}"})
+    assistant.messages.append({"role": "system", "content": f"Patient Age: {age}"})
+    assistant.messages.append({"role": "system", "content": f"smoke or not: {smoke}"})
+    assistant.messages.append({"role": "system", "content": f"Patient Medical Records: {medical_records}"})
+
+
+def get_response(msg):
+    """Returns the assistant's response to the user's message"""
+    # Add the user's message to the conversation
+    #prompt = f'{chat_log}user: {msg}\nassistant:'
+    assistant.messages.append({
+        "role": "user",
+        "content": msg
+    })
+    # Generate a response from the model
+    response = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo-0613',
+        # model="gpt-3.5-turbo-16k",
+        messages=assistant.messages,
+        max_tokens=128,
+        n=1,
+        stop=None,
+        temperature=0.6,
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0
+    )
+    # Extract the assistant's reply
+    assistant_reply = response.choices[0].message['content']
+    # Add the assistant's reply to the conversation
+    assistant.messages.append({
+        "role": "assistant",
+        "content": assistant_reply
+    })
+    # Extract the predicted category from the assistant's final reply
+    predicted_category = assistant.predict_category(assistant_reply)
+    if predicted_category != "Unknown":
+        tmpMsg="Do you want to make an appt. with a [" + predicted_category+ "] Medical Doctor? (y/n)"
+        return {'reply':assistant_reply, 'category':predicted_category, 'followMsg':tmpMsg}
+    return {'reply':assistant_reply}
 

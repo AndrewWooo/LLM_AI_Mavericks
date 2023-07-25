@@ -60,6 +60,13 @@ class Chatbox {
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''
+            // if r.additonalInfo is not empty, then display the additional info
+            if (r.additionalInfo != null) {
+                let msg3 = { name: "Mav", message: r.additionalInfo };
+                this.messages.push(msg3);
+                this.updateChatText(chatbox)
+                textField.value = ''
+            }
 
         }).catch((error) => {
             console.error('Error:', error);
