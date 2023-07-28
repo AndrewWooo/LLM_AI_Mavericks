@@ -4,6 +4,7 @@ from fuzzywuzzy import fuzz
 
 from serpapi import GoogleSearch
 from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut
 
 import smtplib
 import ssl
@@ -37,24 +38,43 @@ def send_email(receiver_email, subject, message):
         # server.starttls(context=ssl.create_default_context())
         server.login(sender_email, sender_password)
         server.send_message(msg)
+    
+    return 'success'
 
-    """Returns are the doctor's name and address, both are strings. \
+   
+
+def do_geocode(address):
+    geopy = Nominatim(user_agent="app")
+    try:
+        return geopy.geocode(address, timeout=10)
+    except GeocoderTimedOut:
+        return do_geocode(address)
+
+def do_googleSearch(params):
+    try:
+        search = GoogleSearch(params)
+        return search.get_dict()
+    except Exception as e:
+        return {"error": str(e)}
+    
+"""
+ Returns are the doctor's name and address, both are strings. \
     use this when the agent want to help user to make an appointment with a doctor and \
     after the user provide the one's address, \
     The inputs are two variables, first one is doctorType: str, \
     second one is address: str.\
     it also return errors if Missing required parameters \
-    or Geocoding failed. Invalid address or API error"""
-
+    or Geocoding failed. Invalid address or API error
+"""        
 def search_doctors(doctorType: str, address: str):
     top_k = 1
     if not doctorType or not address:
       return 'error', 'Missing required parameters.'
         # return jsonify({'error': 'Missing required parameters.'}), 400
     # Initialize Nominatim API
-    geolocator = Nominatim(user_agent="MyApp")
+    #geolocator = Nominatim(user_agent="MyApp")
     # address = "14449 south quiet shade dr, herriman, ut 84096"
-    location = geolocator.geocode(address)
+    location = do_geocode(address)   # modify this line, catch error
     if location:
         latitude = location.latitude
         longitude = location.longitude
@@ -67,8 +87,9 @@ def search_doctors(doctorType: str, address: str):
             "hl": "en",
             "ll": f"@{latitude},{longitude},14z"
         }
-        search = GoogleSearch(params)
-        results = search.get_dict()
+        #search = GoogleSearch(params)
+        #results = search.get_dict()
+        results = do_googleSearch(params) # modify this line, catch error
         doctors = []
         for result in results['local_results'][:top_k]:
             name = result['title']
@@ -93,7 +114,10 @@ class DoctorCategoryAssistant:
             "Oncologist",
             'Pulmonologist',
             "psychologist", 
-            'psychiatrist'
+            'psychiatrist',
+            'rheumatologist',
+            'endocrinologist',
+            'ophthalmologist'
         ]
 
         self.category_mapping = {
@@ -108,7 +132,10 @@ class DoctorCategoryAssistant:
             "oncologist": "Oncology",
             'Pulmonologist': 'Pulmonology',
             'psychologist': 'psychology',
-            'psychiatrist': 'psychiatry'
+            'psychiatrist': 'psychiatry',
+            'rheumatologist': 'rheumatology',
+            'endocrinologist': 'endocrinology',
+            'ophthalmologist': 'ophthalmology'
         }
         system_message = """
         You are a medical AI assistant. Your role is to suggest the appropriate type of doctor for the patient to see based on their details and symptoms. When diagnosing, remember to think step by step, first gathering the patient's symptoms, considering potential causes, asking follow-up questions if necessary, and only then making your suggestion. Use simple, non-medical language that a layperson can understand.

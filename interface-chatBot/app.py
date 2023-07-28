@@ -93,8 +93,11 @@ def chat():
                 Here is the doctor we recommend: {dr_name}, whose address is {dr_address} \n
                 We checked the doctor is avaiable at time: {text}
                 """
-            send_email(receiver_email, subject, mailbody)
-            return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later."}), 200
+            successSend=send_email(receiver_email, subject, mailbody)
+            if successSend=='success':
+                return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later."}), 200
+            else:
+                return jsonify({'answer': "Ops, some errors happens with send email"}), 200
         else:  #session.get('consentOfAppt') == 'n'
             session.pop('consentOfAppt', None) # clear the category in session
             return jsonify({'answer': "Ops, some errors happens!If you want to make a Appt., enter y to continue"}), 200

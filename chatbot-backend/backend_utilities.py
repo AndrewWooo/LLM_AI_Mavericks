@@ -42,6 +42,7 @@ def send_email(sender_email, sender_password, receiver_email, subject, message):
         # server.starttls(context=ssl.create_default_context())
         server.login(sender_email, sender_password)
         server.send_message(msg)
+    return 
 
 def search_doctors(doctorType: str, address: str):
     """Returns are the doctor's name and address, both are strings. \
@@ -58,7 +59,7 @@ def search_doctors(doctorType: str, address: str):
     # Initialize Nominatim API
     geolocator = Nominatim(user_agent="MyApp")
     # address = "14449 south quiet shade dr, herriman, ut 84096"
-    location = geolocator.geocode(address)
+    location = geolocator.geocode(address, timeout=10)
     if location:
         latitude = location.latitude
         longitude = location.longitude
