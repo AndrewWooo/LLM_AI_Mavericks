@@ -6,6 +6,7 @@ function openCalendarPopup() {
   if (!isButtonAClicked) {
     const dateInput = document.createElement('input');
     dateInput.type = 'datetime-local'; // Use 'datetime-local' input type to select both date and time
+    dateInput.min = new Date().toISOString().slice(0, 16); // Set the minimum value to the current date and time
     dateInput.addEventListener('change', () => {
       selectedDate = new Date(dateInput.value);
       alert('Date and time selected successfully!');
