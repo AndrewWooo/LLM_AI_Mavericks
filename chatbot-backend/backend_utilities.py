@@ -5,9 +5,9 @@ from fuzzywuzzy import fuzz
 # api 
 from flask import Flask, request, jsonify
 
-#from serpapi import GoogleSearch
+from serpapi import GoogleSearch
 # import requests
-#from geopy.geocoders import Nominatim
+from geopy.geocoders import Nominatim
 
 import smtplib
 import ssl
@@ -97,7 +97,10 @@ class DoctorCategoryAssistant:
             "Oncologist",
             'Pulmonologist',
             "psychologist", 
-            'psychiatrist'
+            'psychiatrist',
+            'rheumatologist',
+            'endocrinologist',
+            'ophthalmologist'
         ]
 
         self.category_mapping = {
@@ -112,7 +115,10 @@ class DoctorCategoryAssistant:
             "oncologist": "Oncology",
             'Pulmonologist': 'Pulmonology',
             'psychologist': 'psychology',
-            'psychiatrist': 'psychiatry'
+            'psychiatrist': 'psychiatry',
+            'rheumatologist': 'rheumatology',
+            'endocrinologist': 'endocrinology',
+            'ophthalmologist': 'ophthalmology'
         }
         system_message = """
         You are a medical AI assistant. Your role is to suggest the appropriate type of doctor for the patient to see based on their details and symptoms. When diagnosing, remember to think step by step, first gathering the patient's symptoms, considering potential causes, asking follow-up questions if necessary, and only then making your suggestion. Use simple, non-medical language that a layperson can understand.
