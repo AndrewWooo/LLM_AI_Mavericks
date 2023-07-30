@@ -1,0 +1,2 @@
+#install the serpapi module
+pip install google-search-results
