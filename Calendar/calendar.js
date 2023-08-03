@@ -11,7 +11,6 @@ function openCalendarPopup() {
       selectedDate = new Date(dateInput.value);
       alert('Date and time selected successfully!');
     });
-
     // Append the date input element to the document body
     document.body.appendChild(dateInput);
 

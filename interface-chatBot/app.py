@@ -70,7 +70,7 @@ def chat():
             if text.lower() == 'y' or text.lower() == 'yes':
                 session['consentOfAppt'] = 'y'
                 # let user input avaiable time
-                return jsonify({'answer': "Please enter your avaible time"}), 200
+                return jsonify({'answer': "Please enter your avaible time", 'calendar':"openCalendar"}), 200
             elif text.lower() == 'n' or text.lower() == 'no':
                 session['consentOfAppt'] = 'n'
                 return jsonify({'answer': "Goodbye!"}), 200
@@ -88,10 +88,8 @@ def chat():
             if dr_name =='error':
                 return jsonify({'answer': "Ops, some errors happens!"}), 200
             # send email to the patient
-            subject = f'Your appointment with {dr_name} at {dr_address} \nat time: {text}' 
-            mailbody = f"""{reason} \n
-                Here is the doctor we recommend: {dr_name}, whose address is {dr_address} \n
-                We checked the doctor is avaiable at time: {text}
+            subject = f'Confirmed with your appointment with {dr_name} <br>Address:{dr_address} <br>Time: {text}' 
+            mailbody = f"""{reason} \n\n  Here is the doctor we recommend: \n     Doctor Name: {dr_name}\n     Address: {dr_address} \n     We checked the doctor is avaiable at time: {text}
                 """
             successSend=send_email(receiver_email, subject, mailbody)
             if successSend=='success':
