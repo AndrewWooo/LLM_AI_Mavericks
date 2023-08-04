@@ -67,6 +67,12 @@ Hospital Affiliations: Children's Medical Center DallasDallas, TX
 Education & Experience: Children's Hospital/Boston Medical Center,Fellowship, Pediatric Pulmonology, 1993-1996;Baylor College of Medicine (Houston),Residency, Pediatrics, 1990-1993;Lewis Katz School of Medicine at Temple University,Medical School
 Certifications & Licensure: American Board of Pediatrics,Certified in Pediatric Pulmonology;TX State Medical License,Active through 2024;MA State Medical License, Active through 1998
 11
+Name: Thom Allen
+Link: https://www.psychologytoday.com/us/therapists/thom-allen-plano-tx/69677
+Address: 5700 Granite Pkwy STE 200, Plano, TX 75024
+Hospital Affiliation: PranaDynamics
+Education & Experience: University of North Texas, Graduated 1993
+Certifications & Licensure: Certificate from Yoga Alliance
 12
 Name: Dr. Suresh Sureddi MD
 Link: https://health.usnews.com/doctors/suresh-sureddi-365115
@@ -75,13 +81,20 @@ Hospital Affiliations: Parkland Health-DallasDallas, TX
 Education & Experience: University of Texas Southwestern Medical Center,Residency, Psychiatry, 1995-1997; J.J.M. Medical College,Medical School
 Certifications & Licensure: IN State Medical License, Active through 2023; TX State Medical License, Active through 2024
 13
+Name: Dr. Fehmida Zahabi
+Link: https://health.usnews.com/doctors/fehmida-zahabi-987711
+Address: 6300 Stonewood Dr, Plano, TX
+Hospital Affiliation: Medical City DallasDallas, TX
+Education & Experience: UPMC Medical Education, Fellowship, Rheumatology, 1994-1996; Allegheny Health Network Medical Education Consortium (AGH), Residency, Internal Medicine, 1991-1994; Dow University of Health Sciences, Medical School
+Certifications & Licensure:American Board of Internal Medicine, Certified in Rheumatology; CA State Medical License, Active through 2023; TX State Medical License,Active through 2024
+14
 Name: Dr. Leo Jeng MD
 Link: https://health.usnews.com/doctors/leo-jeng-660774
 Address: 4100 W. 15th Street, Suite 202, Plano, TX
 Hospital Affiliations: No Affiliation
 Education & Experience: University of Texas Health Science Center at Houston, Fellowship, Endocrinology, Diabetes, and Metabolism, 2009-2011; Emory University School of Medicine, Residency, Internal Medicine, 2006-2009; Medical College of Georgia, Medical School,BS, Chemical Engineering, 1995-1999
 Certifications & Licensure:TX State Medical License, Active through 2025
-14
+15
 Name: Dr. Robert M. Scharf MD
 Link: https://health.usnews.com/doctors/robert-scharf-144043
 Address: 1645 Dorchester Dr, Plano, TX

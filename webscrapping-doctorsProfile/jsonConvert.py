@@ -45,10 +45,11 @@ with open(filename) as fh:
         if line.strip().isdigit():
             if subdict is not None:
                 subdict = {}
+            #print(category_list[int(line)-1])
             dict1[category_list[int(line)-1]] = subdict
  
         else: 
-            #print(line)
+            print(line)
             command, description = line.strip().split(":",1)
  
             subdict[command] = description.strip().split(";")

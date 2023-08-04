@@ -248,7 +248,26 @@
             "MA State Medical License, Active through 1998"
         ]
     },
-    "psychologist": {},
+    "psychologist": {
+        "Name": [
+            "Thom Allen"
+        ],
+        "Link": [
+            "https://www.psychologytoday.com/us/therapists/thom-allen-plano-tx/69677"
+        ],
+        "Address": [
+            "5700 Granite Pkwy STE 200, Plano, TX 75024"
+        ],
+        "Hospital Affiliation": [
+            "PranaDynamics"
+        ],
+        "Education & Experience": [
+            "University of North Texas, Graduated 1993"
+        ],
+        "Certifications & Licensure": [
+            "Certificate from Yoga Alliance"
+        ]
+    },
     "psychiatrist": {
         "Name": [
             "Dr. Suresh Sureddi MD"
@@ -273,6 +292,30 @@
     },
     "rheumatologist": {
         "Name": [
+            "Dr. Fehmida Zahabi"
+        ],
+        "Link": [
+            "https://health.usnews.com/doctors/fehmida-zahabi-987711"
+        ],
+        "Address": [
+            "6300 Stonewood Dr, Plano, TX"
+        ],
+        "Hospital Affiliation": [
+            "Medical City DallasDallas, TX"
+        ],
+        "Education & Experience": [
+            "UPMC Medical Education, Fellowship, Rheumatology, 1994-1996",
+            " Allegheny Health Network Medical Education Consortium (AGH), Residency, Internal Medicine, 1991-1994",
+            " Dow University of Health Sciences, Medical School"
+        ],
+        "Certifications & Licensure": [
+            "American Board of Internal Medicine, Certified in Rheumatology",
+            " CA State Medical License, Active through 2023",
+            " TX State Medical License,Active through 2024"
+        ]
+    },
+    "endocrinologist": {
+        "Name": [
             "Dr. Leo Jeng MD"
         ],
         "Link": [
@@ -293,7 +336,7 @@
             "TX State Medical License, Active through 2025"
         ]
     },
-    "endocrinologist": {
+    "ophthalmologist": {
         "Name": [
             "Dr. Robert M. Scharf MD"
         ],
