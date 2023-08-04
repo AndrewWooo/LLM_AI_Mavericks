@@ -1,7 +1,7 @@
 # Python program to convert text
 # file to JSON
  
- 
+##NOTE: Data for Psychologist not entered via this code.
 import json
  
  
@@ -17,6 +17,25 @@ subdict = {}
 s = "Certifications & Licensure:American Board of Dermatology,Certified in Dermatology;TX State Medical License,Active through 2025"
 command, description = s.strip().split(":",1)
 # creating dictionary
+category_list = [
+            "General Practitioner",
+            "Cardiologist",
+            "Dermatologist",
+            "Pediatrics",
+            "Neurologist",
+            "Orthopedic Surgeon",
+            "Radiologist",
+            "Gastroenterologist",
+            "Oncologist",
+            'Pulmonologist',
+            "psychologist", 
+            'psychiatrist',
+            'rheumatologist',
+            'endocrinologist',
+            'ophthalmologist'
+        ]
+
+
 with open(filename) as fh:
  
     for line in fh:
@@ -24,9 +43,12 @@ with open(filename) as fh:
         # reads each line and trims of extra the spaces
         # and gives only the valid words
         if line.strip().isdigit():
-            dict1[int(line)] = subdict
+            if subdict is not None:
+                subdict = {}
+            dict1[category_list[int(line)-1]] = subdict
+ 
         else: 
-            print(line)
+            #print(line)
             command, description = line.strip().split(":",1)
  
             subdict[command] = description.strip().split(";")
