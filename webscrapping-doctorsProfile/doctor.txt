@@ -1,0 +1,76 @@
+1
+Name: Dr. Todd Wien
+Link: https://health.usnews.com/doctors/todd-wien-490336
+Address: 8080 Independence Pkwy, Plano, TX
+Hospital Affiliations: Medical City PlanoPlano, TX
+Education & Experience: Dwight David Eisenhower Army Medical Center; Residency, Family Medicine, 1984-1987; University of Virginia School of Medicine, Medical School
+Certifications & Licensure: American Board of Family Medicine, Certified in Family Medicine; PA State Medical License,Active through 1992; TX State Medical License,Active through 2025
+2
+Name: Dr. Rikesh Patel
+Link: https://health.usnews.com/doctors/rikesh-patel-677284
+Address: Baylor Scott and White The Heart Hospital Plano 3801 W. 15th St, Building B, Suite 320, Plano, TX
+Education & Experience:,Icahn School of Medicine at Mount Sinai/Mount Sinai Hospital,Fellowship, Interventional Cardiology, 2013-2014; University of Texas Health Science Center, San Antonio Joe and Teresa Lozano Long, School of Medicine, Fellowship, Cardiovascular Disease, 2010-2013; New York Presbyterian Hospital (Columbia Campus); Residency, Internal Medicine, 2007-2010, Baylor College of Medicine; Medical School, Washington University in St. Louis; AB, Anthropology & Religious Study, 1999-2003
+Certifications & Licensure: American Board of Internal Medicine,Certified in Cardiovascular Disease; American Board of Internal Medicine,Certified in Interventional Cardiology;TX State Medical License,Active through 2024 ;NY State Medical License,Active through 2014
+3
+Name: Dr. Allison F. Singer,MD
+Link: https://health.usnews.com/doctors/allison-singer-148028
+Address: 7000 Preston Road, Plano, TX
+Hospital Affiliations: Texas Health Presbyterian Hospital DallasDallas, TX
+Education & Experience: University of Texas Southwestern Medical Center, Residency, Dermatology, 1996-1999; University of Texas Health Science Center at Houston,Internship, Internal Medicine, 1995-1996;McGovern Medical School at UTHealth,Medical School
+Certifications & Licensure:American Board of Dermatology,Certified in Dermatology;TX State Medical License,Active through 2025
+4
+Name: Dr. Ryan McElroy MD
+Link: https://health.usnews.com/doctors/ryan-mcelroy-617834
+Address: 1101 W Lookout Dr, Richardson, TX
+Hospital Affiliations:Texas Health Presbyterian Hospital PlanoPlano, TX
+Education & Experience: University of Texas Southwestern Medical Center,Chief Residency, Pediatrics, 2007-2008;University of Texas Southwestern Medical Center,Residency, Pediatrics, 2004-2007;University of Texas Southwestern Medical School,Medical School
+Certifications & Licensure: American Board of Pediatrics,Certified in Pediatrics;NM State Medical License,Active through 2023;TX State Medical License,Active through 2023
+5
+Name: Dr. Avesh R. Verma MD
+Link: https://health.usnews.com/doctors/avesh-verma-631641
+Address: 4716 Alliance Blvd, Plano, TX
+Education & Experience: University of Texas Southwestern Medical Center,Fellowship, Clinical Neurophysiology, 2010-2011;University of Texas Southwestern Medical Center, Residency, Neurology, 2006-2010;LSU School of Medicine in Shreveport, Medical School
+Certifications & Licensure: American Board of Psychiatry and Neurology, Certified in Clinical Neurophysiology; American Board of Psychiatry and Neurology, Certified in Neurology;LA State Medical License, Active through 2024;TX State Medical License, Active through 2024
+6
+Name: Dr. Richard A. Hostin MD
+Link: https://health.usnews.com/doctors/richard-hostin-371589
+Address: 1600 Coit Rd, Plano, TX
+Hospital Affiliations: Medical City DallasDallas, TX
+Education & Experience: Twin Cities Spine Center,Fellowship, Orthopaedic Surgery Of The Spine, 2005-2006; University of Oklahoma College of Medicine, Medical School; University of California Davis Health, Residency, Orthopaedic Surgery, 2000-2005
+Certifications & Licensure: American Board of Orthopaedic Surgery,Certified in Orthopaedic Surgery;TX State Medical License,Active through 2023;LA State Medical License,Active through 2023;MN State Medical License,Active through 2006;CA State Medical License,Active through 2023;OK State Medical License,Active through 2018
+7
+Name: Dr. Patricia A. Krakos
+Link: https://health.usnews.com/doctors/patricia-krakos-385414
+Address: BaylorScott&White, Regional Medical Center at Plano, Women's Imaging Center, Plano, TX
+Hospital Affiliations: Baylor Scott and White Medical Center-PlanoPlano, TX; Texas Health Presbyterian Hospital PlanoPlano, TX
+Education & Experience: Baylor University Medical Center, Residency, Radiology-Diagnostic, 1992-1992; University of Texas Southwestern Medical Center, Residency, Radiology-Diagnostic, 1988-1992; Texas Tech University Health Sciences Center at Lubbock, Medical School
+Certifications & Licensure: American Board of Radiology,Certified in Diagnostic Radiology; TX State Medical License,Active through 2025;
+8
+Name: Dr. Syed S. Hasan MD
+Link: https://health.usnews.com/doctors/syed-hasan-762155
+Address: 4221 Medical Pkwy, Carrollton, TX
+Hospital Affiliations: Carrollton Regional Medical CenterCarrollton, TX;Texas Health Presbyterian Hospital PlanoPlano, TX
+Education & Experience: Texas A&M College of Medicine-Scott and White Medical Center (Temple),Fellowship, Gastroenterology, 2012-2015;Texas A&M College of Medicine-Scott and White Medical Center (Temple),Residency, Internal Medicine, 2009-2012;Texas AM Health Science Center College of Medicine,Medical School
+Certifications & Licensure: American Board of Internal Medicine, Certified in Gastroenterology; TX State Medical License, Active through 2024; OH State Medical License, Active through 2014; MD State Medical License, Active through 2014
+9
+Name: Dr. Mukeshkumar D. Delvadiya MD
+Link: https://health.usnews.com/doctors/mukeshkumar-delvadiya-757838
+Address: 5858 W. Main Street, Frisco, TX
+Hospital Affiliations: Dallas Medical Center, Dallas, TX; Medical City Plano, Plano, TX
+Education & Experience:Howard University, Fellowship, Hematology and Medical Oncology, 2011-2014;Texas Tech University (Permian Basin),Residency, Internal Medicine, 2008-2011;B. J. Medical College Ahmedabad,Medical School
+Certifications & Licensure: American Board of Internal Medicine,Certified in Hematology;American Board of Internal Medicine,Certified in Internal Medicine;American Board of Internal Medicine,Certified in Medical Oncology;VA State Medical License,Active through 2014;DC State Medical License,Active through 2014;MD State Medical License,Active through 2014; TX State Medical License,Active through 2024
+10
+Name: Dr. Peter N. Schochet MD
+Link: https://health.usnews.com/doctors/peter-schochet-29371
+Address: 6130 W Parker Rd, Plano, TX
+Hospital Affiliations: Children's Medical Center DallasDallas, TX
+Education & Experience: Children's Hospital/Boston Medical Center,Fellowship, Pediatric Pulmonology, 1993-1996;Baylor College of Medicine (Houston),Residency, Pediatrics, 1990-1993;Lewis Katz School of Medicine at Temple University,Medical School
+Certifications & Licensure: American Board of Pediatrics,Certified in Pediatric Pulmonology;TX State Medical License,Active through 2024;MA State Medical License, Active through 1998
+11
+12
+Name: Dr. Suresh Sureddi MD
+Link: https://health.usnews.com/doctors/suresh-sureddi-365115
+Address: 730 E park Blvd, Plano, TX
+Hospital Affiliations: Parkland Health-DallasDallas, TX
+Education & Experience: University of Texas Southwestern Medical Center,Residency, Psychiatry, 1995-1997; J.J.M. Medical College,Medical School
+Certifications & Licensure: IN State Medical License, Active through 2023; TX State Medical License, Active through 2024
