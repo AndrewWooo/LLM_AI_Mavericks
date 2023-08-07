@@ -101,8 +101,8 @@ body {
     height: 650px;
     width: 850px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 /* HEADER */
@@ -113,8 +113,8 @@ body {
     align-items: center;
     /*justify-content: center;*/
     padding: 15px 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     box-shadow: var(--primaryBoxShadow);
 }
 
@@ -139,22 +139,22 @@ body {
 
 .messages__item {
     margin-top: 10px;
-    background: #AFEEEE;
+    background: rgb(117, 255, 255);
     padding: 8px 12px;
     max-width: 70%;
 }
 
 .messages__item--visitor,
 .messages__item--typing {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .messages__item--operator {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     background: var(--primary);
     color: black;
 }
@@ -180,12 +180,16 @@ body {
     border-radius: 30px;
     text-align: left;
 }
-
+#findDoctor{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 .chatbox__send--footer {
     color: black;
     font-size: 1rem;
     font-weight: 400;
-    margin-right: 25px;
+    margin-right: 35px;
 }
 
 .chatbox__button button,

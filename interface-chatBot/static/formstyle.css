@@ -33,11 +33,11 @@ form {
     background-color: white;
     display: none;
     margin: 0 auto;
-    width: 400px;
+    width: 600px;
     /* 显示表单的轮廓 */
     padding: 1em;
     border: 1px solid #CCC;
-    border-radius: 1em;
+    border-radius: 8px;
   }
   
   ul {
@@ -53,7 +53,7 @@ form {
   label {
     /* 确保所有 label 大小相同并正确对齐 */
     display: inline-block;
-    width: 90px;
+    width: 150px;
     text-align: right;
   }
   
@@ -64,7 +64,7 @@ form {
     font: 1em sans-serif;
   
     /* 使所有文本输入框大小相同 */
-    width: 300px;
+    width: 400px;
     box-sizing: border-box;
   
     /* 调整文本输入框的边框样式 */
