@@ -1,22 +1,24 @@
 body{
-    background-color: rgb(37, 37, 37);
+    background-color: #FFFFF0;
 }
 .web_header{
   width: 99%;
   height: 90px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(37, 37, 37);
+  background-color: #F0FFFF;
   align-items: center;
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
 }
 
 .web_header li {
-color: white;
+color: black;
 font-size: 22px;
 list-style: none;
 margin-left: 30px;
+font-weight: bold;
 }
 .nav_info{
   display: flex;
@@ -37,13 +39,14 @@ margin-right: 50px;
 }
 
 .intro_box{
+  position: relative;
   height: 100%;
   width: 43%;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   margin-right: 110px;
-  color: white;
+  color: black;
 }
 .intro_box h1{
   font-size: 40px;
@@ -81,9 +84,10 @@ margin-right: 50px;
   margin-left: -25px;
 }
 .introimg{
-  width: 43%;
+  width: 635px;
   height: 100%;
-  object-fit: cover;
+  z-index: 0;
+  display: block;
 }
 
 
@@ -99,6 +103,7 @@ margin-right: 50px;
     border-radius: 8px;
     color: black;
     z-index: 1000;
+    margin-top: 20px;
   }
   
   ul {
