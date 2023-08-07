@@ -7,9 +7,7 @@
     <title>Chatbot</title>
 </head>
 <body>
-<div class="start_form">
-    <button onclick="document.location.href=this.getAttribute('href');" href="{{ url_for('form') }}">Get Started</button>
-</div>    
+
 <div class="container">
     <div class="chatbox">
         <div class="chatbox__support">
@@ -23,8 +21,9 @@
                 </div>
             </div>
             <div class="chatbox__messages">
-                <div class="messages__item messages__item--visitor">Hi, what brought you here today?</div>
+                <div class="messages__item messages__item--visitor">Hi, How do you do? What brought you here today?</div>
             </div>
+            <div class="messages__item messages__item--visitor" id="loader" style="opacity: 0;"></div>
             <div class="chatbox__footer" id="inputContent">
                 <input type="text" placeholder="Write a message..." id="inputMsg">
                 <button class="chatbox__send--footer send__button" id="sendButton">Send</button>

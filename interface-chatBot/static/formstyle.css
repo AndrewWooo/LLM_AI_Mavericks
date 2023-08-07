@@ -1,5 +1,37 @@
+body{
+    background-color: rgb(37, 37, 37);
+}
+.web_header{
+  width: 95%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(37, 37, 37);
+  align-items: center;
+  padding: 10px;
+}
+
+.web_header li {
+color: white;
+font-size: 22px;
+list-style: none;
+margin-left: 30px;
+}
+.nav_info{
+  display: flex;
+  align-items: center;
+}
+/* Add some spacing between the items */
+.nav_info li, 
+.formButton {
+margin-right: 60px;
+}
+
+
 form {
     /* 居中表单 */
+    background-color: white;
+    display: none;
     margin: 0 auto;
     width: 400px;
     /* 显示表单的轮廓 */
@@ -55,11 +87,15 @@ form {
   
   button {
     /* 把按钮放到和文本输入框一样的位置 */
-    padding-left: 90px; /* 和 label 的大小一样 */
-  }
-  
-  button {
-    /* 这个外边距的大小与 label 和文本输入框之间的间距差不多 */
+    /*padding-left: 90px; /* 和 label 的大小一样 */
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     margin-left: .5em;
   }
+
   
