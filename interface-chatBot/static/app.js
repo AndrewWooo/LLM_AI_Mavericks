@@ -8,7 +8,7 @@ class Chatbox {
         this.sendButtonClicked = false;
         this.selectedTime = null;
         this.state = false;
-        this.messages = [{ name: "Mav", message: "Hi, what brought you here today?" }];
+        this.messages = [{ name: "Mav", message: "Hi, how do you do? What brought you here today?" }];
     }
 
     display() {
@@ -55,6 +55,13 @@ class Chatbox {
         this.messages.push(msg1);
         this.updateChatText(chatbox);
         textField.value = ''
+        var loader1 = document.getElementById('loader');
+        loader1.animate([{ width: '0%', opacity:'0'},{ width: '25%', opacity:'0.5'}, { width: '50%', opacity:'1'},{ width: '75%', opacity:'1'},{ width: '60%', opacity:'0'}],{
+            duration: 4000, // Duration of the animation (in milliseconds)
+            iterations: 1, // Number of times the animation should run (1 means one time)
+            easing: 'ease', // Timing function (optional, default is 'ease')
+            fill: 'forwards', // Stay at the final keyframe after the animation (optional)
+        });
         fetch('http://127.0.0.1:8080/chatOnline', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
@@ -89,7 +96,6 @@ class Chatbox {
             this.sendButtonClicked = false;
           });
     }
-
     openCalendar() {
         const dateInput = document.createElement('input');
         dateInput.type = 'datetime-local'; // Use 'datetime-local' input type to select both date and time
