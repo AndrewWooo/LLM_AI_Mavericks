@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, session, redirect, g
 from flask_session import Session
 from backend_utilities import get_response, addSystemMessage, send_email, search_doctors
-from twilio.twiml.messaging_response import MessagingResponse
+#from twilio.twiml.messaging_response import MessagingResponse
 
 
 app = Flask(__name__)
@@ -93,25 +93,6 @@ def chat():
         else:  #session.get('consentOfAppt') == 'n'
             session.pop('consentOfAppt', None) # clear the category in session
             return jsonify({'answer': "Ops, some errors happens!If you want to make a Appt., enter y to continue"}), 200
-
-
-    
-
-
-# chatbot interface for using SMS
-@app.post('/chatSMS')
-def chatSMS():
-    incoming_msg = request.values['Body']
-    # use phone number as session_id
-    session_id = request.values['From']
-    r = MessagingResponse()
-    """
-    msg = get_response(incoming_msg)
-    r.message(msg)
-    """
-    # below is for testing
-    r.message('this is the response')
-    return str(r)
 
 
     

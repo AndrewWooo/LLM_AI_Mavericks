@@ -9,6 +9,11 @@ body {
     font-weight: 400;
     font-size: 100%;
     background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+
 }
 
 *, html {
@@ -18,7 +23,52 @@ body {
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
     --primary: #7FFFD4;
 }
+/*DoctorInfo
+==============*/
+.doctorInfo{
+    margin: 0 auto;
+    width: 450px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
+    margin-top: 100px;
+    margin-left: 80px;
+    opacity: 0;
+}
+.doctorInfo h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
 
+  /* Add CSS style to left-align labels and textboxes */
+  .label-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .doctorInfo label {
+    width: 200px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+  }
+
+  /* Styling for textareas and textboxes */
+  .doctorInfo textarea, input[type="text"] {
+    width: 500px; /* Adjust the width as needed */
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: left;
+  }
+  #addressTextbox {
+    min-height: 100px;
+    resize: vertical;
+  }
 /* CHATBOX
 =============== */
 .chatbox {

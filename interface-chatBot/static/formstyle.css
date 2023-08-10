@@ -102,10 +102,11 @@ margin-right: 50px;
     /* 显示表单的轮廓 */
     padding: 1em;
     border: 1px solid #CCC;
-    border-radius: 8px;
     color: black;
-    z-index: 1000;
+    z-index: -1000;
     margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
   }
   
   ul {

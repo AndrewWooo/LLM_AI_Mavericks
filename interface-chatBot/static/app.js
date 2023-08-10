@@ -3,7 +3,8 @@ class Chatbox {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),
             chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button')
+            sendButton: document.querySelector('.send__button'),
+            findDoctorButton: document.getElementById('findDoctor'),
         }
         this.sendButtonClicked = false;
         this.selectedTime = null;
@@ -12,11 +13,13 @@ class Chatbox {
     }
 
     display() {
-        const {openButton, chatBox, sendButton} = this.args;
+        const {openButton, chatBox, sendButton, findDoctorButton} = this.args;
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
+
+        findDoctorButton.addEventListener('click', () => this.doctorInfo())
 
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
@@ -25,7 +28,10 @@ class Chatbox {
             }
         })
     }
-
+    doctorInfo(){
+        const doctorInfoBox = document.querySelector('.doctorInfo');
+        doctorInfoBox.style.opacity = 1;
+    }
     toggleState(chatbox) {
         this.state = !this.state;
 
