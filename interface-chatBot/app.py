@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, session, redirect, g
 from flask_session import Session
 from backend_utilities import get_response, addSystemMessage, send_email, search_doctors
-from twilio.twiml.messaging_response import MessagingResponse
+#from twilio.twiml.messaging_response import MessagingResponse
 
 
 app = Flask(__name__)
@@ -16,16 +16,15 @@ def index():
     # Each time refreshing the webpage:
     session.pop('category', None) # clear the category in session
     session.pop('consentOfAppt', None) # clear the consentOfAppt in session
-    return render_template('index.html')
+    #session.pop('formFilled', None) # clear the formFilled in session
+    return render_template('form.html')
 
 # store the user name, age, email, address... info  in session
 # session act as global variable here
-@app.route("/form", methods=["POST", "GET"])
+@app.route("/chat", methods=["POST", "GET"])
 def form():
     if request.method == "POST":# record the user info in session
         session['formFilled'] = True
-        session.pop('category', None) # clear the category in session
-        session.pop('consentOfAppt', None) # clear the consentOfAppt in session
         session['phone'] = request.form.get("phone")
         session['email'] = request.form.get("email")
         session['address'] = request.form.get("address")
@@ -35,15 +34,10 @@ def form():
         medR=session['medical_records'] = request.form.get("medical_records") #
         session['height'] = request.form.get("height") 
         session['weight'] = request.form.get("weight")
-        
         # add the user info to the assistant object
         addSystemMessage(gender, age, smoke, medR)
-        
-        # store all the info in database
-        #storeInfo()
-        # redirect to the main page
-        return redirect("/")
-    return render_template("form.html")
+        #return redirect("/chatOnline")
+    return render_template("index.html")
 
 # chatbot interface for online chat
 @app.post('/chatOnline')
@@ -93,31 +87,12 @@ def chat():
                 """
             successSend=send_email(receiver_email, subject, mailbody)
             if successSend=='success':
-                return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later."}), 200
+                return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later. You are all set, goodbye!"}), 200
             else:
                 return jsonify({'answer': "Ops, some errors happens with send email"}), 200
         else:  #session.get('consentOfAppt') == 'n'
             session.pop('consentOfAppt', None) # clear the category in session
             return jsonify({'answer': "Ops, some errors happens!If you want to make a Appt., enter y to continue"}), 200
-
-
-    
-
-
-# chatbot interface for using SMS
-@app.post('/chatSMS')
-def chatSMS():
-    incoming_msg = request.values['Body']
-    # use phone number as session_id
-    session_id = request.values['From']
-    r = MessagingResponse()
-    """
-    msg = get_response(incoming_msg)
-    r.message(msg)
-    """
-    # below is for testing
-    r.message('this is the response')
-    return str(r)
 
 
     

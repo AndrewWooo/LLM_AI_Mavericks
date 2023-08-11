@@ -1,11 +1,112 @@
-form {
+body{
+    background-color: white;
+    opacity: 0.9;
+}
+.web_header{
+  width: 99%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7FFFD4;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(155, 154, 154, 0.5);
+  opacity: 0.9;
+}
+
+.web_header li {
+color: black;
+font-size: 22px;
+list-style: none;
+margin-left: 30px;
+font-weight: bold;
+}
+.nav_info{
+  display: flex;
+  align-items: center;
+}
+/* Add some spacing between the items */
+.nav_info li, 
+.formButton {
+margin-right: 50px;
+}
+
+.web_body{
+  display: flex;
+  justify-self: flex-start;
+  justify-content: center;
+  align-items: left;
+  height: 660px;
+}
+
+.intro_box{
+  position: relative;
+  height: 100%;
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 110px;
+  color: black;
+}
+.intro_box h1{
+  font-size: 40px;
+  margin-bottom: 36px;
+  margin-top: 100px;
+}
+.intro_box h2{
+  margin-left: 20px;
+  align-items: center;
+}
+.intro_box i{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADaElEQVR4nK1XSWgUQRQdF3ABxYsLXlyiorcIGuMpccM5TNf/3dBqFMxFYjx7yaiYm1Hw4km8CTpxvQiGaEJijB68C9GAB1EQl4gHJbgk+VK91Pzqqe6u0SloaKp+/ff3/6tQqGOR768hgKOEeIkQbxPicPTJ/4uE2EGOs7oenlaLEIEQRwlglhAp85M0ACMkhGgE8G4CeJYB+IUAPhDAdMr5OLlua/3AhcI8QjyraQzwixAHCLGLPG8jFYuLNHqA9cGZ1B5gRrMIYlnS2IF3di4mgFsJBhVynA3WCnjeOkK8n3BNv+Sdrzlo4FMkxB5b4Bp+AAcDN1UFqWRagqTZq8Svpan/FZzx3EYA75lSZ7ICblZp3gBwxdt1j2kuNQUmxdEuCf7D7Aa+KwjxXSI7nprynGI/NQo8EuAG0/4T+3e4AKMq1eqI9lxw1/UZ4EvyvK0E8DvaGw6JwvIa+/5hw8CFWBvEUqwYQHOwj/iAxcIqudHBzN/VEPAwnQcZ3x4m2HFmlcOFqLGEGyzyCbGFEK+pz3V3WguAeIqBPCffX6DOPG8zO+uTxPeijTmtvCI+SVSyNyTEMgvwLYT4I7rzPZnOUZn/GZ3fkVH6OG4sigigPaXTXc8Eb2tbSIgvGP2JFCE/RjSPqgIATBmJS6WlBPCKCdKRof15Bj6YVnYJ4CsX4K7JBdoFIbYrsyF+k83GQLNDpRjA57TBJGh2Eku5AINJpiYIDVKf1vo8DyzfX0IAE+pcCDeVj+NsYla6IIvFEZs0pN7e+QQwxGjPMeGuWMcJYjfjcUgvRIgDucWl2l7/kBC7SIj9zKRvqVhcnskjrg9yaPH9lfHmiKpYOV1Q6xsyNeNWG86C7Tl3m1icDHHNBJ9csphEAl81pOnl3Hvh9BzTl5KH4yobXHdvJqMwNSe0RpMzbpHrHmCuGjMRtGoDCWJTjhWag9RkjSYz8uPcDzFazISIZabVpIUQMjXLFuCTpsZUSxzW6Yo2lALsy6Rn9cBo9mrVk/xu5o7nFI7l/UziuSh4Mq1RE+3hnTkNPG8sT1iiXPMwkTkMcDIwK2MWCB1WuO6IJp56Yp/3WD9MagKzmh3mp5k+9ye751hqwNWzCMAJXsF2j9OZqGTred6IJWc4OUbJSSZ4QUmg8JP/fbK2q/Jquf4CsaE0Ttvfs/QAAAAASUVORK5CYII=") no-repeat center;
+  background-size: cover;
+  
+}
+.intro_box h2 span{
+  font-size: 18px;
+  margin-bottom: 24px;
+  margin-left: 6px;
+}
+.getStart{
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  margin-left: 53px;
+}
+#startButton{
+  font-weight: 600;
+}
+.intro_box p{
+  font-size: 16px;
+  margin-left: -25px;
+}
+.introimg{
+  margin-top: 10px;
+  width: 634px;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+
+
+.form {
     /* 居中表单 */
+    background-color: white;
+    display: none;
     margin: 0 auto;
-    width: 400px;
+    width: 600px;
     /* 显示表单的轮廓 */
     padding: 1em;
     border: 1px solid #CCC;
-    border-radius: 1em;
+    color: black;
+    z-index: -1000;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #aaa;
   }
   
   ul {
@@ -21,8 +122,8 @@ form {
   label {
     /* 确保所有 label 大小相同并正确对齐 */
     display: inline-block;
-    width: 90px;
-    text-align: right;
+    width: 150px;
+    text-align: left;
   }
   
   input,
@@ -32,7 +133,7 @@ form {
     font: 1em sans-serif;
   
     /* 使所有文本输入框大小相同 */
-    width: 300px;
+    width: 400px;
     box-sizing: border-box;
   
     /* 调整文本输入框的边框样式 */
@@ -55,11 +156,17 @@ form {
   
   button {
     /* 把按钮放到和文本输入框一样的位置 */
-    padding-left: 90px; /* 和 label 的大小一样 */
-  }
-  
-  button {
-    /* 这个外边距的大小与 label 和文本输入框之间的间距差不多 */
+    /*padding-left: 90px; /* 和 label 的大小一样 */
+    padding: 10px 16px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     margin-left: .5em;
+    width: 100px;
+    cursor: pointer;
   }
+
   
