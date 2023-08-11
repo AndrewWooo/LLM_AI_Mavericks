@@ -1,363 +1,960 @@
 {
-    "General Practitioner": {
-        "Name": [
-            "Dr. Todd Wien"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/todd-wien-490336"
-        ],
-        "Address": [
-            "8080 Independence Pkwy, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Medical City PlanoPlano, TX"
-        ],
-        "Education & Experience": [
-            "Dwight David Eisenhower Army Medical Center",
-            " Residency, Family Medicine, 1984-1987",
-            " University of Virginia School of Medicine, Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Family Medicine, Certified in Family Medicine",
-            " PA State Medical License,Active through 1992",
-            " TX State Medical License,Active through 2025"
-        ]
-    },
-    "Cardiologist": {
-        "Name": [
-            "Dr. Rikesh Patel"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/rikesh-patel-677284"
-        ],
-        "Address": [
-            "Baylor Scott and White The Heart Hospital Plano 3801 W. 15th St, Building B, Suite 320, Plano, TX"
-        ],
-        "Education & Experience": [
-            ",Icahn School of Medicine at Mount Sinai/Mount Sinai Hospital,Fellowship, Interventional Cardiology, 2013-2014",
-            " University of Texas Health Science Center, San Antonio Joe and Teresa Lozano Long, School of Medicine, Fellowship, Cardiovascular Disease, 2010-2013",
-            " New York Presbyterian Hospital (Columbia Campus)",
-            " Residency, Internal Medicine, 2007-2010, Baylor College of Medicine",
-            " Medical School, Washington University in St. Louis",
-            " AB, Anthropology & Religious Study, 1999-2003"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Internal Medicine,Certified in Cardiovascular Disease",
-            " American Board of Internal Medicine,Certified in Interventional Cardiology",
-            "TX State Medical License,Active through 2024 ",
-            "NY State Medical License,Active through 2014"
-        ]
-    },
-    "Dermatologist": {
-        "Name": [
-            "Dr. Allison F. Singer,MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/allison-singer-148028"
-        ],
-        "Address": [
-            "7000 Preston Road, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Texas Health Presbyterian Hospital DallasDallas, TX"
-        ],
-        "Education & Experience": [
-            "University of Texas Southwestern Medical Center, Residency, Dermatology, 1996-1999",
-            " University of Texas Health Science Center at Houston,Internship, Internal Medicine, 1995-1996",
-            "McGovern Medical School at UTHealth,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Dermatology,Certified in Dermatology",
-            "TX State Medical License,Active through 2025"
-        ]
-    },
-    "Pediatrics": {
-        "Name": [
-            "Dr. Ryan McElroy MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/ryan-mcelroy-617834"
-        ],
-        "Address": [
-            "1101 W Lookout Dr, Richardson, TX"
-        ],
-        "Hospital Affiliations": [
-            "Texas Health Presbyterian Hospital PlanoPlano, TX"
-        ],
-        "Education & Experience": [
-            "University of Texas Southwestern Medical Center,Chief Residency, Pediatrics, 2007-2008",
-            "University of Texas Southwestern Medical Center,Residency, Pediatrics, 2004-2007",
-            "University of Texas Southwestern Medical School,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Pediatrics,Certified in Pediatrics",
-            "NM State Medical License,Active through 2023",
-            "TX State Medical License,Active through 2023"
-        ]
-    },
-    "Neurologist": {
-        "Name": [
-            "Dr. Avesh R. Verma MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/avesh-verma-631641"
-        ],
-        "Address": [
-            "4716 Alliance Blvd, Plano, TX"
-        ],
-        "Education & Experience": [
-            "University of Texas Southwestern Medical Center,Fellowship, Clinical Neurophysiology, 2010-2011",
-            "University of Texas Southwestern Medical Center, Residency, Neurology, 2006-2010",
-            "LSU School of Medicine in Shreveport, Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Psychiatry and Neurology, Certified in Clinical Neurophysiology",
-            " American Board of Psychiatry and Neurology, Certified in Neurology",
-            "LA State Medical License, Active through 2024",
-            "TX State Medical License, Active through 2024"
-        ]
-    },
-    "Orthopedic Surgeon": {
-        "Name": [
-            "Dr. Richard A. Hostin MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/richard-hostin-371589"
-        ],
-        "Address": [
-            "1600 Coit Rd, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Medical City DallasDallas, TX"
-        ],
-        "Education & Experience": [
-            "Twin Cities Spine Center,Fellowship, Orthopaedic Surgery Of The Spine, 2005-2006",
-            " University of Oklahoma College of Medicine, Medical School",
-            " University of California Davis Health, Residency, Orthopaedic Surgery, 2000-2005"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Orthopaedic Surgery,Certified in Orthopaedic Surgery",
-            "TX State Medical License,Active through 2023",
-            "LA State Medical License,Active through 2023",
-            "MN State Medical License,Active through 2006",
-            "CA State Medical License,Active through 2023",
-            "OK State Medical License,Active through 2018"
-        ]
-    },
-    "Radiologist": {
-        "Name": [
-            "Dr. Patricia A. Krakos"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/patricia-krakos-385414"
-        ],
-        "Address": [
-            "BaylorScott&White, Regional Medical Center at Plano, Women's Imaging Center, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Baylor Scott and White Medical Center-PlanoPlano, TX",
-            " Texas Health Presbyterian Hospital PlanoPlano, TX"
-        ],
-        "Education & Experience": [
-            "Baylor University Medical Center, Residency, Radiology-Diagnostic, 1992-1992",
-            " University of Texas Southwestern Medical Center, Residency, Radiology-Diagnostic, 1988-1992",
-            " Texas Tech University Health Sciences Center at Lubbock, Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Radiology,Certified in Diagnostic Radiology",
-            " TX State Medical License,Active through 2025",
-            ""
-        ]
-    },
-    "Gastroenterologist": {
-        "Name": [
-            "Dr. Syed S. Hasan MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/syed-hasan-762155"
-        ],
-        "Address": [
-            "4221 Medical Pkwy, Carrollton, TX"
-        ],
-        "Hospital Affiliations": [
-            "Carrollton Regional Medical CenterCarrollton, TX",
-            "Texas Health Presbyterian Hospital PlanoPlano, TX"
-        ],
-        "Education & Experience": [
-            "Texas A&M College of Medicine-Scott and White Medical Center (Temple),Fellowship, Gastroenterology, 2012-2015",
-            "Texas A&M College of Medicine-Scott and White Medical Center (Temple),Residency, Internal Medicine, 2009-2012",
-            "Texas AM Health Science Center College of Medicine,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Internal Medicine, Certified in Gastroenterology",
-            " TX State Medical License, Active through 2024",
-            " OH State Medical License, Active through 2014",
-            " MD State Medical License, Active through 2014"
-        ]
-    },
-    "Oncologist": {
-        "Name": [
-            "Dr. Mukeshkumar D. Delvadiya MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/mukeshkumar-delvadiya-757838"
-        ],
-        "Address": [
-            "5858 W. Main Street, Frisco, TX"
-        ],
-        "Hospital Affiliations": [
-            "Dallas Medical Center, Dallas, TX",
-            " Medical City Plano, Plano, TX"
-        ],
-        "Education & Experience": [
-            "Howard University, Fellowship, Hematology and Medical Oncology, 2011-2014",
-            "Texas Tech University (Permian Basin),Residency, Internal Medicine, 2008-2011",
-            "B. J. Medical College Ahmedabad,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Internal Medicine,Certified in Hematology",
-            "American Board of Internal Medicine,Certified in Internal Medicine",
-            "American Board of Internal Medicine,Certified in Medical Oncology",
-            "VA State Medical License,Active through 2014",
-            "DC State Medical License,Active through 2014",
-            "MD State Medical License,Active through 2014",
-            " TX State Medical License,Active through 2024"
-        ]
-    },
-    "Pulmonologist": {
-        "Name": [
-            "Dr. Peter N. Schochet MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/peter-schochet-29371"
-        ],
-        "Address": [
-            "6130 W Parker Rd, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Children's Medical Center DallasDallas, TX"
-        ],
-        "Education & Experience": [
-            "Children's Hospital/Boston Medical Center,Fellowship, Pediatric Pulmonology, 1993-1996",
-            "Baylor College of Medicine (Houston),Residency, Pediatrics, 1990-1993",
-            "Lewis Katz School of Medicine at Temple University,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Pediatrics,Certified in Pediatric Pulmonology",
-            "TX State Medical License,Active through 2024",
-            "MA State Medical License, Active through 1998"
-        ]
-    },
-    "psychologist": {
-        "Name": [
-            "Thom Allen"
-        ],
-        "Link": [
-            "https://www.psychologytoday.com/us/therapists/thom-allen-plano-tx/69677"
-        ],
-        "Address": [
-            "5700 Granite Pkwy STE 200, Plano, TX 75024"
-        ],
-        "Hospital Affiliation": [
-            "PranaDynamics"
-        ],
-        "Education & Experience": [
-            "University of North Texas, Graduated 1993"
-        ],
-        "Certifications & Licensure": [
-            "Certificate from Yoga Alliance"
-        ]
-    },
-    "psychiatrist": {
-        "Name": [
-            "Dr. Suresh Sureddi MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/suresh-sureddi-365115"
-        ],
-        "Address": [
-            "730 E park Blvd, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Parkland Health-DallasDallas, TX"
-        ],
-        "Education & Experience": [
-            "University of Texas Southwestern Medical Center,Residency, Psychiatry, 1995-1997",
-            " J.J.M. Medical College,Medical School"
-        ],
-        "Certifications & Licensure": [
-            "IN State Medical License, Active through 2023",
-            " TX State Medical License, Active through 2024"
-        ]
-    },
-    "rheumatologist": {
-        "Name": [
-            "Dr. Fehmida Zahabi"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/fehmida-zahabi-987711"
-        ],
-        "Address": [
-            "6300 Stonewood Dr, Plano, TX"
-        ],
-        "Hospital Affiliation": [
-            "Medical City DallasDallas, TX"
-        ],
-        "Education & Experience": [
-            "UPMC Medical Education, Fellowship, Rheumatology, 1994-1996",
-            " Allegheny Health Network Medical Education Consortium (AGH), Residency, Internal Medicine, 1991-1994",
-            " Dow University of Health Sciences, Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Internal Medicine, Certified in Rheumatology",
-            " CA State Medical License, Active through 2023",
-            " TX State Medical License,Active through 2024"
-        ]
-    },
-    "endocrinologist": {
-        "Name": [
-            "Dr. Leo Jeng MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/leo-jeng-660774"
-        ],
-        "Address": [
-            "4100 W. 15th Street, Suite 202, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "No Affiliation"
-        ],
-        "Education & Experience": [
-            "University of Texas Health Science Center at Houston, Fellowship, Endocrinology, Diabetes, and Metabolism, 2009-2011",
-            " Emory University School of Medicine, Residency, Internal Medicine, 2006-2009",
-            " Medical College of Georgia, Medical School,BS, Chemical Engineering, 1995-1999"
-        ],
-        "Certifications & Licensure": [
-            "TX State Medical License, Active through 2025"
-        ]
-    },
-    "ophthalmologist": {
-        "Name": [
-            "Dr. Robert M. Scharf MD"
-        ],
-        "Link": [
-            "https://health.usnews.com/doctors/robert-scharf-144043"
-        ],
-        "Address": [
-            "1645 Dorchester Dr, Plano, TX"
-        ],
-        "Hospital Affiliations": [
-            "Medical City Plano, Plano, TX"
-        ],
-        "Education & Experience": [
-            "University of California (San Francisco), Residency, Ophthalmology, 1969-1973",
-            " University of Southern California/LACUSC Medical Center, Internship, Transitional Year, 1968-1969",
-            " University of California (San Francisco) School of Medicine, Medical School"
-        ],
-        "Certifications & Licensure": [
-            "American Board of Ophthalmology, Certified in Ophthalmology",
-            " CA State Medical License, Active through",
-            " TX State Medical License, Active through 2023"
-        ]
-    }
+    "General Practitioner": [
+        {
+            "Name": [
+                "Dr. Todd Wien"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/todd-wien-490336"
+            ],
+            "Address": [
+                "8080 Independence Pkwy, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City PlanoPlano, TX"
+            ],
+            "Education & Experience": [
+                "Dwight David Eisenhower Army Medical Center",
+                " Residency, Family Medicine, 1984-1987",
+                " University of Virginia School of Medicine, Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Family Medicine, Certified in Family Medicine",
+                " PA State Medical License,Active through 1992",
+                " TX State Medical License,Active through 2025"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Jennifer M. Miller"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/jennifer-miller-344257"
+            ],
+            "Address": [
+                "1001 E Lookout Dr, Richardson, TX 75082"
+            ],
+            "Hospital Affiliations": [
+                "Texas Health Presbyterian Hospital of Rockwall"
+            ],
+            "Education & Experience": [
+                "Auburn University,B.S., Microbiology , 1989-1992",
+                "University of Alabama Medical Center,Residency, Family Medicine, 1996-1999",
+                "University of Alabama School of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Family Medicine,Certified in Family Medicine",
+                "AL State Medical License,Active through 2001",
+                "TX State Medical License,Active through 2025",
+                ""
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Nisha Satish"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/nisha-satish-771409"
+            ],
+            "Address": [
+                "7170 Preston Road, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Hunt Regional Medical Center",
+                "Veterans Affairs North Texas Health Care System-Dallas"
+            ],
+            "Education & Experience": [
+                "Kasturba Medical College Manipal,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Family Medicine,Certified in Family Medicine",
+                "OH State Medical License,Active through 2008",
+                "TX State Medical License,Active through 2024"
+            ]
+        }
+    ],
+    "Cardiologist": [
+        {
+            "Name": [
+                "Dr. Rajjit Abrol"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/rajjit-abrol-517668"
+            ],
+            "Address": [
+                "3801 W 15th St, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City Plano",
+                "Texas Health Presbyterian Hospital Plano",
+                "Baylor Scott and White Heart and Vascular Hospital-Dallas",
+                "Baylor University Medical CenterDallas, TX",
+                "Methodist Richardson Medical CenterRichardson, TX"
+            ],
+            "Education & Experience": [
+                "Baylor University Medical Center,Fellowship, Clinical Cardiac Electrophysiology, 2005-2006",
+                "University of Texas Southwestern Medical Center,Fellowship, Cardiovascular Disease, 2002-2005",
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 1998-2001",
+                "Emory University School of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Clinical Cardiac Electrophysiology",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Bradley M. Leonard"
+            ],
+            "Link": [
+                ""
+            ],
+            "Address": [
+                "4716 Dexter Dr, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Baylor Scott and White Medical Center-PlanoPlano, TX",
+                "Wise Health System-DecaturDecatur, TX"
+            ],
+            "Education & Experience": [
+                "Beth Israel Deaconess Medical Center/Harvard Medical School,Fellowship, Cardiovascular Disease, 1986-1989",
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 1983-1985",
+                "University of Texas Southwestern Medical Center,Internship, Internal Medicine, 1982-1983",
+                "University of Texas Southwestern Medical School,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Internal Medicine",
+                "American Board of Internal Medicine,Certified in Cardiovascular Disease",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Rikesh Patel"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/rikesh-patel-677284"
+            ],
+            "Address": [
+                "Baylor Scott and White The Heart Hospital Plano 3801 W. 15th St, Building B, Suite 320, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                ""
+            ],
+            "Education & Experience": [
+                "Icahn School of Medicine at Mount Sinai/Mount Sinai Hospital,Fellowship, Interventional Cardiology, 2013-2014",
+                " University of Texas Health Science Center, San Antonio Joe and Teresa Lozano Long, School of Medicine, Fellowship, Cardiovascular Disease, 2010-2013",
+                " New York Presbyterian Hospital (Columbia Campus)",
+                " Residency, Internal Medicine, 2007-2010, Baylor College of Medicine",
+                " Medical School, Washington University in St. Louis",
+                " AB, Anthropology & Religious Study, 1999-2003"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Cardiovascular Disease",
+                " American Board of Internal Medicine,Certified in Interventional Cardiology",
+                "TX State Medical License,Active through 2024 ",
+                "NY State Medical License,Active through 2014"
+            ]
+        }
+    ],
+    "Dermatologist": [
+        {
+            "Name": [
+                "Dr. Eric S. Hollabaugh"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/eric-hollabaugh-174285"
+            ],
+            "Address": [
+                "6100 Windhaven Pkwy, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "University of Texas Medical Branch School of Medicine,Medical School",
+                "Baylor University Medical Center,Residency, Internal Medicine, 1988-1990",
+                "Louisiana State University School of Medicine,Residency, Dermatology, 1990-1993"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Dermatology,Certified in Dermatology",
+                "LA State Medical License,Active through 2023",
+                "TX State Medical License,Active through 2023,Awards, Honors & Recognitions"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Angie Koriakos"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/angie-koriakos-818501"
+            ],
+            "Address": [
+                "399 W. Campbell Rd. Ste 410, Richardson, TX"
+            ],
+            "Hospital Affiliations": [
+                "Methodist Richardson Medical Center"
+            ],
+            "Education & Experience": [
+                "University of California (San Francisco) School of Medicine,Fellowship, HIV Dermatology",
+                "Loma Linda University,MPH, Global Health,MPH, Global Health, 2005-2006",
+                "MedStar Health/Georgetown University Hospital,Internship, Internal Medicine",
+                "HCA Medical City,Chief Residency, Dermatology",
+                "College of Osteopathic Medicine of the Pacific,Medical School",
+                "Arizona State University,B.S., Kinesiology/Exercise Science"
+            ],
+            "Certifications & Licensure": [
+                "AOA Board of Dermatology,Certified in Dermatology",
+                "CA State Medical License,Active through 2013",
+                "VA State Medical License,Active through 2011",
+                "TX State Medical License,Active through 2024",
+                "DC State Medical License,Active through 2011",
+                "OK State Medical License,Active through 2017",
+                "AZ State Medical License,Active through 2021"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Allison F. Singer,MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/allison-singer-148028"
+            ],
+            "Address": [
+                "7000 Preston Road, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Texas Health Presbyterian Hospital DallasDallas, TX"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center, Residency, Dermatology, 1996-1999",
+                " University of Texas Health Science Center at Houston,Internship, Internal Medicine, 1995-1996",
+                "McGovern Medical School at UTHealth,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Dermatology,Certified in Dermatology",
+                "TX State Medical License,Active through 2025"
+            ]
+        }
+    ],
+    "Pediatrics": [
+        {
+            "Name": [
+                "Dr. L. Michelle Booth"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/l-michelle-booth-260311"
+            ],
+            "Address": [
+                "1001 E Lookout Dr, Richardson, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "Vanderbilt University Medical Center,Residency, Pediatrics, 1988-1991",
+                "McGovern Medical School at UTHealth,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Pediatrics,Certified in Pediatrics",
+                "CO State Medical License,Active through 2025",
+                "TX State Medical License,Active through 2024",
+                "WY State Medical License,Active through 2014",
+                "AK State Medical License,Active through 2014",
+                "VA State Medical License,Active through 2014",
+                "WA State Medical License,Active through 1993"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Renesha C. Butler"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/renesha-butler-746101"
+            ],
+            "Address": [
+                "7601 Preston Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Children's Medical Center Plano"
+            ],
+            "Education & Experience": [
+                "University of Oklahoma,Bachelor of Science, Psychology , 2002-2006",
+                "Orlando Health/Arnold Palmer Hospital for Children,Residency, Pediatrics, 2012-2014",
+                "Orlando Health/Arnold Palmer Hospital for Children,Internship, Pediatrics, 2011-2012",
+                "Meharry Medical College School of Medicine,Medical School, 2007-2011"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Pediatrics,Certified in Pediatrics",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Ryan McElroy MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/ryan-mcelroy-617834"
+            ],
+            "Address": [
+                "1101 W Lookout Dr, Richardson, TX"
+            ],
+            "Hospital Affiliations": [
+                "Texas Health Presbyterian Hospital PlanoPlano, TX"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Chief Residency, Pediatrics, 2007-2008",
+                "University of Texas Southwestern Medical Center,Residency, Pediatrics, 2004-2007",
+                "University of Texas Southwestern Medical School,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Pediatrics,Certified in Pediatrics",
+                "NM State Medical License,Active through 2023",
+                "TX State Medical License,Active through 2023"
+            ]
+        }
+    ],
+    "Neurologist": [
+        {
+            "Name": [
+                "Dr. Daniel Gossett"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/daniel-gossett-923884"
+            ],
+            "Address": [
+                "4032 McDermott Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Baylor University Medical Center"
+            ],
+            "Education & Experience": [
+                "University of Colorado,Fellowship, Child Neurology, 2015-2016",
+                "University of Texas Southwestern Medical Center,Fellowship, Epilepsy, 2012-2015",
+                "University of Texas Southwestern Medical Center,Residency, Pediatrics, 2010-2012",
+                "University of Texas Southwestern Medical School,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Psychiatry and Neurology,Certified in Epilepsy",
+                "American Board of Psychiatry and Neurology,Certified in Neurology with Special Qualification in Child Neurology",
+                "CO State Medical License,Active through 2017",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Norma Melamed"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/norma-melamed-795176"
+            ],
+            "Address": [
+                "12810 Hillcrest Rd, Dallas, TX"
+            ],
+            "Hospital Affiliation": [
+                "Baylor Scott and White Institute for Rehabilitation-Dallas",
+                "Texas Health Presbyterian Hospital Dallas"
+            ],
+            "Education & Experience": [
+                "University of the Witwatersrand,Medical School",
+                "Albany Medical Center,Residency, Neurology, 1980-1983"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Psychiatry and Neurology,Certified in Neurology",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Avesh R. Verma MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/avesh-verma-631641"
+            ],
+            "Address": [
+                "4716 Alliance Blvd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Baylor Scott and White Medical Center-Plano",
+                "Baylor Scott and White Institute for Rehabilitation-Dallas",
+                "Baylor Scott and White Medical Center-Frisco"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Fellowship, Clinical Neurophysiology, 2010-2011",
+                "University of Texas Southwestern Medical Center, Residency, Neurology, 2006-2010",
+                "LSU School of Medicine in Shreveport, Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Psychiatry and Neurology, Certified in Clinical Neurophysiology",
+                " American Board of Psychiatry and Neurology, Certified in Neurology",
+                "LA State Medical License, Active through 2024",
+                "TX State Medical License, Active through 2024"
+            ]
+        }
+    ],
+    "Orthopedic Surgeon": [
+        {
+            "Name": [
+                "Dr. J L. Pace"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/j-pace-499811"
+            ],
+            "Address": [
+                "7211 Preston Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "Children's Hospital (Boston),Fellowship, Orthopaedic Sports Medicine, 2011-2012",
+                "Childrens Hospital Los Angeles,Fellowship, Pediatric Orthopaedics, 2010-2011",
+                "University of Washington,Residency, Orthopaedic Surgery, 2005-2010",
+                "Boston University School of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Orthopaedic Surgery,Certified in Orthopaedic Sports Medicine",
+                "American Board of Orthopaedic Surgery,Certified in Orthopaedic Surgery",
+                "WA State Medical License,Active through 2010",
+                "FL State Medical License,Active through 2019",
+                "CT State Medical License,Active through 2021",
+                "MA State Medical License,Active through 2013",
+                "CA State Medical License,Active through 2023",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Mark C. Valente"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/mark-valente-801991"
+            ],
+            "Address": [
+                "7712 San Jacinto Pl, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Dallas Medical Center",
+                "Methodist Hospital for Surgery"
+            ],
+            "Education & Experience": [
+                "Nova Southeastern University - College of Osteopathic Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "AOA Board of Orthopedic Surgery,Certified in Orthopedic Surgery",
+                "MI State Medical License,Active through 2010",
+                "OK State Medical License,Active through 2024",
+                "PA State Medical License,Active through 2008",
+                "CA State Medical License,Active through 2012",
+                "AZ State Medical License,Active through 2025",
+                "TX State Medical License,Active through 2023"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Richard A. Hostin MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/richard-hostin-371589"
+            ],
+            "Address": [
+                "1600 Coit Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City DallasDallas, TX"
+            ],
+            "Education & Experience": [
+                "Twin Cities Spine Center,Fellowship, Orthopaedic Surgery Of The Spine, 2005-2006",
+                " University of Oklahoma College of Medicine, Medical School",
+                " University of California Davis Health, Residency, Orthopaedic Surgery, 2000-2005"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Orthopaedic Surgery,Certified in Orthopaedic Surgery",
+                "TX State Medical License,Active through 2023",
+                "LA State Medical License,Active through 2023",
+                "MN State Medical License,Active through 2006",
+                "CA State Medical License,Active through 2023",
+                "OK State Medical License,Active through 2018"
+            ]
+        }
+    ],
+    "Radiologist": [
+        {
+            "Name": [
+                "Dr. Neil J. Fernandes"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/neil-fernandes-616739"
+            ],
+            "Address": [
+                "7211 Preston Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Children's Medical Center Dallas",
+                "Children's Medical Center Plano",
+                "UT Southwestern Medical Center"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Residency, Radiology-Diagnostic, 2005-2009",
+                "University of Texas Southwestern Medical Center,Fellowship, Pediatric Radiology, 2009-2010",
+                "Texas Health Resources (Dallas),Internship, Internal Medicine, 2004-2005",
+                "University of Texas Southwestern Medical School,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Radiology,Certified in Diagnostic Radiology",
+                "American Board of Radiology,Certified in Pediatric Radiology",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Rosemary C. McCoy"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/rosemary-mccoy-394519"
+            ],
+            "Address": [
+                "7777 Forest Ln, Dallas, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City Dallas"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Residency, Radiology-Diagnostic, 1979-1983",
+                "University of Texas Southwestern Medical Center/Parkland Memorial Hospital,Internship, Transitional Year, 1978-1979",
+                "University of Texas Southwestern Medical School,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Radiology,Certified in Diagnostic Radiology",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Patricia A. Krakos"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/patricia-krakos-385414"
+            ],
+            "Address": [
+                "BaylorScott&White, Regional Medical Center at Plano, Women's Imaging Center, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Baylor Scott and White Medical Center-PlanoPlano, TX",
+                " Texas Health Presbyterian Hospital PlanoPlano, TX"
+            ],
+            "Education & Experience": [
+                "Baylor University Medical Center, Residency, Radiology-Diagnostic, 1992-1992",
+                " University of Texas Southwestern Medical Center, Residency, Radiology-Diagnostic, 1988-1992",
+                " Texas Tech University Health Sciences Center at Lubbock, Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Radiology,Certified in Diagnostic Radiology",
+                " TX State Medical License,Active through 2025",
+                ""
+            ]
+        }
+    ],
+    "Gastroenterologist": [
+        {
+            "Name": [
+                "Dr. Peter M. Loeb"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/peter-loeb-31534"
+            ],
+            "Address": [
+                "8230 Walnut Hill Ln, Dallas, TX"
+            ],
+            "Hospital Affiliations": [
+                "Texas Health Presbyterian Hospital Dallas"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 1966-1967",
+                "University of California (San Francisco),Fellowship, Gastroenterology, 1969-1971",
+                "National Institutes of Health Arthritis and Metabolic Disease,Other Training, 1967-1999",
+                "University of Texas Southwestern Medical School,Medical School",
+                "Yale-New Haven Medical Center,Internship, Internal Medicine, 1965-1966"
+            ],
+            "Certifications & Licensure": [
+                "TX State Medical License,Active through 2020"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. John C. Lee"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/john-lee-301215"
+            ],
+            "Address": [
+                "8220 Walnut Hill Ln, Dallas, TX"
+            ],
+            "Hospital Affiliations": [
+                "Texas Health Presbyterian Hospital Dallas",
+                "Texas Health Presbyterian Hospital Dallas"
+            ],
+            "Education & Experience": [
+                "Washington University/B-JH/SLCH Consortium,Residency, Internal Medicine, 1993-1996",
+                "Johns Hopkins University,Fellowship, Gastroenterology, 1996-1999",
+                "University of Chicago Division of the Biological Sciences The Pritzker School of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Gastroenterology",
+                "American Board of Internal Medicine,Certified in Internal Medicine",
+                "TX State Medical License,Active through 2023",
+                "MD State Medical License,Active through 2000"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Syed S. Hasan MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/syed-hasan-762155"
+            ],
+            "Address": [
+                "4221 Medical Pkwy, Carrollton, TX"
+            ],
+            "Hospital Affiliations": [
+                "Carrollton Regional Medical CenterCarrollton, TX",
+                "Texas Health Presbyterian Hospital PlanoPlano, TX"
+            ],
+            "Education & Experience": [
+                "Texas A&M College of Medicine-Scott and White Medical Center (Temple),Fellowship, Gastroenterology, 2012-2015",
+                "Texas A&M College of Medicine-Scott and White Medical Center (Temple),Residency, Internal Medicine, 2009-2012",
+                "Texas AM Health Science Center College of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine, Certified in Gastroenterology",
+                " TX State Medical License, Active through 2024",
+                " OH State Medical License, Active through 2014",
+                " MD State Medical License, Active through 2014"
+            ]
+        }
+    ],
+    "Oncologist": [
+        {
+            "Name": [
+                "Dr. Bradford R. Hirsch"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/bradford-hirsch-623196"
+            ],
+            "Address": [
+                "Dr. Bradford R. Hirsch"
+            ],
+            "Hospital Affiliations": [
+                "Medical City Dallas"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical School,Medical School",
+                "Duke University Hospital,Fellowship, Hematology and Medical Oncology, 2009-2012",
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 2006-2009"
+            ],
+            "Certifications & Licensure": [
+                "TX State Medical License,Active through 2021",
+                "NC State Medical License,Active through 2015"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Mukeshkumar D. Delvadiya MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/mukeshkumar-delvadiya-757838"
+            ],
+            "Address": [
+                "5858 W. Main Street, Frisco, TX"
+            ],
+            "Hospital Affiliations": [
+                "Dallas Medical Center, Dallas, TX",
+                " Medical City Plano, Plano, TX"
+            ],
+            "Education & Experience": [
+                "Howard University, Fellowship, Hematology and Medical Oncology, 2011-2014",
+                "Texas Tech University (Permian Basin),Residency, Internal Medicine, 2008-2011",
+                "B. J. Medical College Ahmedabad,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Hematology",
+                "American Board of Internal Medicine,Certified in Internal Medicine",
+                "American Board of Internal Medicine,Certified in Medical Oncology",
+                "VA State Medical License,Active through 2014",
+                "DC State Medical License,Active through 2014",
+                "MD State Medical License,Active through 2014",
+                " TX State Medical License,Active through 2024"
+            ]
+        }
+    ],
+    "Pulmonologist": [
+        {
+            "Name": [
+                "Dr. Wyatt Rousseau"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/wyatt-rousseau-29522"
+            ],
+            "Address": [
+                "8220 Walnut Hill Ln, Dallas, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 1973-1974",
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 1969-1971",
+                "Vanderbilt University School of Medicine,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Internal Medicine",
+                "American Board of Internal Medicine,Certified in Pulmonary Disease",
+                "TX State Medical License,Active through 2024"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Peter N. Schochet MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/peter-schochet-29371"
+            ],
+            "Address": [
+                "6130 W Parker Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Children's Medical Center DallasDallas, TX"
+            ],
+            "Education & Experience": [
+                "Children's Hospital/Boston Medical Center,Fellowship, Pediatric Pulmonology, 1993-1996",
+                "Baylor College of Medicine (Houston),Residency, Pediatrics, 1990-1993",
+                "Lewis Katz School of Medicine at Temple University,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Pediatrics,Certified in Pediatric Pulmonology",
+                "TX State Medical License,Active through 2024",
+                "MA State Medical License, Active through 1998"
+            ]
+        }
+    ],
+    "psychologist": [
+        {
+            "Name": [
+                "Thom Allen"
+            ],
+            "Link": [
+                "https://www.psychologytoday.com/us/therapists/thom-allen-plano-tx/69677"
+            ],
+            "Address": [
+                "5700 Granite Pkwy STE 200, Plano, TX 75024"
+            ],
+            "Hospital Affiliation": [
+                "PranaDynamics"
+            ],
+            "Education & Experience": [
+                "University of North Texas, Graduated 1993"
+            ],
+            "Certifications & Licensure": [
+                "Certificate from Yoga Alliance"
+            ]
+        }
+    ],
+    "psychiatrist": [
+        {
+            "Name": [
+                "Dr. Susan D. Delaney"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/susan-delaney-73205"
+            ],
+            "Address": [
+                "2313 Coit Road Suite E, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "Loyola Medicine MacNeal Hospital,Internship, Transitional Year, 1977-1978",
+                "Menninger School of Psychiatry,Residency, Psychiatry, 1978-1981",
+                "University of Wisconsin School of Medicine and Public Health,Medical School",
+                "Louisiana State University (Shreveport)/Rapides Regional Medical Center,Residency, Family Medicine, 1977-1977"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Psychiatry and Neurology,Certified in Psychiatry",
+                "TX State Medical License,Active through 2025"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Suresh Sureddi MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/suresh-sureddi-365115"
+            ],
+            "Address": [
+                "730 E park Blvd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Parkland Health-DallasDallas, TX"
+            ],
+            "Education & Experience": [
+                "University of Texas Southwestern Medical Center,Residency, Psychiatry, 1995-1997",
+                " J.J.M. Medical College,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "IN State Medical License, Active through 2023",
+                " TX State Medical License, Active through 2024"
+            ]
+        }
+    ],
+    "rheumatologist": [
+        {
+            "Name": [
+                "Dr. Supriya Sehgal"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/supriya-sehgal-625244"
+            ],
+            "Address": [
+                "2821 E. Pres. George Bush Hwy, Richardson, TX"
+            ],
+            "Hospital Affiliations": [
+                "Baylor Scott and White Medical Center-Plano"
+            ],
+            "Education & Experience": [
+                "University of Pennsylvania Health System,Fellowship, Rheumatology, 2008-2010",
+                "University of Texas Southwestern Medical Center,Residency, Internal Medicine, 2005-2008",
+                "Queen's University at Kingston,Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Rheumatology",
+                "TX State Medical License,Active through 2025",
+                "PA State Medical License,Active through 2010"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Fehmida Zahabi"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/fehmida-zahabi-987711"
+            ],
+            "Address": [
+                "6300 Stonewood Dr, Plano, TX"
+            ],
+            "Hospital Affiliation": [
+                "Medical City DallasDallas, TX"
+            ],
+            "Education & Experience": [
+                "UPMC Medical Education, Fellowship, Rheumatology, 1994-1996",
+                " Allegheny Health Network Medical Education Consortium (AGH), Residency, Internal Medicine, 1991-1994",
+                " Dow University of Health Sciences, Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine, Certified in Rheumatology",
+                " CA State Medical License, Active through 2023",
+                " TX State Medical License,Active through 2024"
+            ]
+        }
+    ],
+    "endocrinologist": [
+        {
+            "Name": [
+                "Dr. Lori E. Coors"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/lori-coors-149763"
+            ],
+            "Address": [
+                "1708 Coit Rd, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City Dallas"
+            ],
+            "Education & Experience": [
+                "University of New Mexico School of Medicine,Medical School",
+                "University of Texas Southwestern Medical Center,Residency, Ophthalmology, 2000-2003",
+                "Texas Health Resources (Dallas),Internship, Internal Medicine, 1999-2000"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Ophthalmology,Certified in Ophthalmology",
+                "GA State Medical License,Active through 2005",
+                "TX State Medical License,Active through 2025"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Leo Jeng MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/leo-jeng-660774"
+            ],
+            "Address": [
+                "4100 W. 15th Street, Suite 202, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "No Affiliation"
+            ],
+            "Education & Experience": [
+                "University of Texas Health Science Center at Houston, Fellowship, Endocrinology, Diabetes, and Metabolism, 2009-2011",
+                " Emory University School of Medicine, Residency, Internal Medicine, 2006-2009",
+                " Medical College of Georgia, Medical School,BS, Chemical Engineering, 1995-1999"
+            ],
+            "Certifications & Licensure": [
+                "TX State Medical License, Active through 2025"
+            ]
+        }
+    ],
+    "ophthalmologist": [
+        {
+            "Name": [
+                "Dr. Debra Ouyang"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/debra-ouyang-714887"
+            ],
+            "Address": [
+                "PO Box 998, Allen, TX"
+            ],
+            "Hospital Affiliations": [
+                "Mercy Hospitals of Bakersfield"
+            ],
+            "Education & Experience": [
+                "Los Angeles County-Harbor-UCLA Medical Center,Fellowship, Endocrinology, Diabetes, and Metabolism, 2012-2014",
+                "Eastern Virginia Medical School,Medical School",
+                "Cedars-Sinai Medical Center,Residency, Internal Medicine, 2009-2012"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Internal Medicine,Certified in Internal Medicine",
+                "American Board of Internal Medicine,Certified in Endocrinology, Diabetes and Metabolism",
+                "CA State Medical License,Active through 2024",
+                "VA State Medical License,Active through 2020",
+                "TX State Medical License,Active through 2025"
+            ]
+        },
+        {
+            "Name": [
+                "Dr. Robert M. Scharf MD"
+            ],
+            "Link": [
+                "https://health.usnews.com/doctors/robert-scharf-144043"
+            ],
+            "Address": [
+                "1645 Dorchester Dr, Plano, TX"
+            ],
+            "Hospital Affiliations": [
+                "Medical City Plano, Plano, TX"
+            ],
+            "Education & Experience": [
+                "University of California (San Francisco), Residency, Ophthalmology, 1969-1973",
+                " University of Southern California/LACUSC Medical Center, Internship, Transitional Year, 1968-1969",
+                " University of California (San Francisco) School of Medicine, Medical School"
+            ],
+            "Certifications & Licensure": [
+                "American Board of Ophthalmology, Certified in Ophthalmology",
+                " CA State Medical License, Active through",
+                " TX State Medical License, Active through 2023"
+            ]
+        }
+    ]
 }
