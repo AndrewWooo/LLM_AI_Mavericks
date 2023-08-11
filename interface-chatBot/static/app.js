@@ -19,7 +19,7 @@ class Chatbox {
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
-        findDoctorButton.addEventListener('click', () => this.doctorInfo())
+        findDoctorButton.addEventListener('click', () => this.toggleDoctorInfo())
 
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
@@ -28,9 +28,15 @@ class Chatbox {
             }
         })
     }
-    doctorInfo(){
+    toggleDoctorInfo(){
         const doctorInfoBox = document.querySelector('.doctorInfo');
         doctorInfoBox.style.opacity = 1;
+        doctorInfoBox.animate([{ opacity: '1' },{ opacity: '1' },{ opacity: '1' }, { opacity: '1' },{ opacity: '0' }], {
+            duration: 10000, // Duration of the animation (in milliseconds)
+            iterations: 1, // Number of times the animation should run (1 means one time)
+            easing: 'ease', // Timing function (optional, default is 'ease')
+            fill: 'forwards', // Stay at the final keyframe after the animation (optional)
+        });
     }
     toggleState(chatbox) {
         this.state = !this.state;
