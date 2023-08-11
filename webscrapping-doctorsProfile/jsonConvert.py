@@ -46,7 +46,10 @@ with open(filename) as fh:
             if subdict is not None:
                 subdict = {}
             #print(category_list[int(line)-1])
-            dict1[category_list[int(line)-1]] = subdict
+            if category_list[int(line)-1] not in dict1.keys():
+                dict1[category_list[int(line)-1]] = []
+            #dict1[category_list[int(line)-1]] = []
+            dict1[category_list[int(line)-1]].append(subdict)
  
         else: 
             print(line)
