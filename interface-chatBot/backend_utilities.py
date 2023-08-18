@@ -14,7 +14,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-serpapi_key = os.environ.get('SERPAPI_KEY')
+#serpapi_key = os.environ.get('SERPAPI_KEY')
 api_key = os.environ.get('OPENAI_API_KEY')
 openai.api_key = api_key
 
@@ -220,10 +220,11 @@ def get_response(msg):
     })
     # Generate a response from the model
     response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo-0613',
-        # model="gpt-3.5-turbo-16k",
+        model='gpt-3.5-turbo-16k',
+        #model="gpt-3.5-turbo-16k",
+        #model='gpt-3.5-turbo-16k-0613'
         messages=assistant.messages,
-        max_tokens=128,
+        max_tokens=256,
         n=1,
         stop=None,
         temperature=0.6,
@@ -257,7 +258,7 @@ def getDoctor(category: str, file_path:str):
         data = json.load(json_file)
     doctors = data[category]
     if doctors:
-        return {'reply':f'Here are some doctors for {category}', 'doctors':doctors}
+        return {'reply':f'Here are some doctors for [{category}]:', 'doctors':doctors}
     else:
         doctors=data['General Practice or Family Medicine']
         return {'reply':f'Sorry, we do not have any doctor for {category}, we recommend you to see a General Practitioner', 'doctors':doctors}

@@ -7,63 +7,121 @@
     <title>Chatbot</title>
 </head>
 <body>
-<div class="doctorInfo">
-    <h1>Doctor Information</h1>
-    <div class="label-container">
-        <label for="nameTextbox">Name:</label>
-        <input type="text" id="nameTextbox" disabled>
-    </div>
-    <div class="label-container">
-        <label for="linkTextbox">Link:</label>
-        <input type="text" id="linkTextbox" disabled>
-    </div>
-    <div class="label-container">
-        <label for="addressTextbox">Address:</label>
-        <textarea id="addressTextbox" rows="1" disabled></textarea>
-    </div>
-    <div class="label-container">
-        <label for="hospitalAffiliationsTextbox">Hospital Affiliations:</label>
-        <textarea id="hospitalAffiliationsTextbox" rows="1" disabled></textarea>
-    </div>
-    <div class="label-container">
-        <label for="educationTextbox">Education & Experience:</label>
-        <textarea id="educationTextbox" rows="4" disabled></textarea>
-    </div>
-    <div class="label-container">
-        <label for="certificationsTextbox">Certifications & Licensure:</label>
-        <textarea id="certificationsTextbox" rows="4" disabled></textarea>
-    </div>
-</div>
-<div class="container">
-    <div class="chatbox">
-        <div class="chatbox__support">
-            <div class="chatbox__header">
-                <div class="chatbox__image--header">
-                    <img src="https://img.icons8.com/ios/50/message-bot.png" alt="message-bot">
-                </div>
-                <div class="chatbox__content--header">
-                    <h4 class="chatbox__heading--header">AI Health Support</h4>
-                    <p class="chatbox__description--header">Tell me everything about your health </p>
-                </div>
+    <div id ="accordionBox">
+        <button class="accordion">See Info: </button>
+        <div class="doctorInfo" id = "dr1">
+            <div class="label-container">
+                <label for="nameTB1">Name:</label>
+                <input type="text" id="nameTB1" disabled>
+                
             </div>
-            <div class="chatbox__messages">
-                <div class="messages__item messages__item--visitor">Hi, How do you do? What brought you here today?</div>
+            <div class="label-container">
+                <label for="linkTB1">Link:</label>
+                <input type="text" id="linkTB1" disabled>
             </div>
-            <div class="messages__item messages__item--visitor" id="loader" style="opacity: 0;"></div>
-            <div class="chatbox__footer" id="inputContent">
-                <input type="text" placeholder="Write a message..." id="inputMsg">
-                <button name="findDoctor" id="findDoctor">
-                    <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/>
-                </button>
-                <button class="chatbox__send--footer send__button" id="sendButton">Send</button>
+            <div class="label-container">
+                <label for="addressTB1">Address:</label>
+                <input type="text" id="addressTB1" disabled>
+            </div>
+            <div class="label-container">
+                <label for="hospitalTB1">Hospital Affiliations:</label>
+                <input type="text" id="hospitalTB1" disabled>
+            </div>
+            <div class="label-container" >
+                <label for="educationTB1">Education& Experience:</label>
+                <textarea id="educationTB1" rows="4" disabled></textarea>
+            </div>
+            <div class="label-container" > 
+                <label for="certificationsTB1">Certifications& Licensure:</label>
+                <textarea id="certificationsTB1" rows="4" disabled></textarea>
             </div>
         </div>
-        <div class="chatbox__button">
-            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        <button class="accordion">See Info: </button>
+        <div class="doctorInfo" id = "dr2">
+            <div class="label-container">
+                <label for="nameTB2">Name:</label>
+                <input type="text" id="nameTB2" disabled>
+            </div>
+            <div class="label-container">
+                <label for="linkTB2">Link:</label>
+                <input type="text" id="linkTB2" disabled>
+            </div>
+            <div class="label-container">
+                <label for="addressTB2">Address:</label>
+                <input type="text" id="addressTB2" disabled>
+            </div>
+            <div class="label-container">
+                <label for="hospitalTB2">Hospital Affiliations:</label>
+                <input type="text" id="hospitalTB2" disabled>
+            </div>
+            <div class="label-container">
+                <label for="educationTB2">Education & Experience:</label>
+                <textarea id="educationTB2" rows="4" disabled></textarea>
+            </div>
+            <div class="label-container">
+                <label for="certificationsTB2">Certifications & Licensure:</label>
+                <textarea id="certificationsTB2" rows="4" disabled></textarea>
+            </div>
         </div>
-        
+        <button class="accordion">See Info: </button>
+        <div class="doctorInfo" id = "dr3">
+            <div class="label-container">
+                <label for="nameTB3">Name:</label>
+                <input type="text" id="nameTB3" disabled>
+                
+            </div>
+            <div class="label-container">
+                <label for="linkTB3">Link:</label>
+                <input type="text" id="linkTB3" disabled>
+            </div>
+            <div class="label-container">
+                <label for="addressTB3">Address:</label>
+                <input type="text" id="addressTB3" disabled>
+            </div>
+            <div class="label-container">
+                <label for="hospitalTB3">Hospital Affiliations:</label>
+                <input type="text" id="hospitalTB3" disabled>
+            </div>
+            <div class="label-container">
+                <label for="educationTB3">Education & Experience:</label>
+                <textarea id="educationTB3" rows="4" disabled></textarea>
+            </div>
+            <div class="label-container">
+                <label for="certificationsTB3">Certifications & Licensure:</label>
+                <textarea id="certificationsTB3" rows="4" disabled></textarea>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img width="58" height="58" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADa0lEQVR4nO2ZS2xNURSGjwGi+phoSU2kDy0dlDZV7QBtpQMDI00kgohHJPUYkHTaiaGhVxhUK7RBhIFIUIKZAVJalTDzKHEp6hGtT7bsU+uunHPvPfeeS25y/mSnyV57/Wutvc9ae+1bx4kQIUJWAJQCd+wodXINQBd/0eXkGoBuEUC3k2sgCuA/I6dOAKgG7gPPxYiJAGJKZsYIcAvoBXYAJf/C0RZrcJeaP0zmmAKuAfXZcLwEuCKM/QIWCXkr8DWEIFzuM0BhWM43AC+Jx5g2AOQBZWpU21HmI1sN7AWuAz+VjWGgIlPnVwAfBekkcBJYmOnGeNgqB/rtCbh4l3YQwALgtdr11rAd1wA2ABPCrkn2IicogKuC5A2wVMmbgBPAM2UwVbzw212gUXH2BnV+naoObUJWAAwQDg5aznag0+SRsNMhPifjQ12qzuuKckTIioBHITn/5wSAGuHobRWE3KgPSUss0Ax8F0qGeL6QX1ayHpvocwIdcbzNGpW4p1RiS4wDSxKR3VUK94SsXTm/OV2nPezuU9xNQjaqfOr3I5nlUYt3C/l5r8/KymYA680JJnHUdx1wVvD3+ARn8CrRC0qjUcjNN+iiUul2eu2ehw3fdUCt4B9TORmHIAGUWVmhmBv30DXl1MXOBAEkXAd8EfK5dq4qkwCqROl08SmLAXwW8nw7V51JAGt8PqHFSneLnf8BLEsQgO864h19L+bbUg1gpiWW2OOTxEc99OtS6Vv81hF/OgOBk9guHlSLh4RsrZg3SbjVCQnANnUXTPdcwBPlU1+y1vmbUigX8ksqiD7bE+Wl4bRpv5tt7y9xUaypVIHFpD9+xKtUNZi+OGw1ekj28EC+M4ALQmba+tpUd6dBRG7+dgiZqUjn1M6E9QrLF3Y2qmZuedAjlkc7IS810fIeB56m2U4bHaN7zPRTinulaiinb+YgAZidHhIkJjc2BSYKbrdDbchwWg8aS1Zhn3XyqAeSJlJ6tiptqZaf5tuMbdkgdCkzTd8NW6NbEjzc3TFPcc62Oi3AfuCmRyP5OLSNstWnL4PENXqHRNMmb3WNKfvOKAjFeRVIvf3xyfw6ERSjluOAj3zSvsODVZs0AykGtgOn7e094vHToRyjbgEQ//gwOoOWw3AVZ93xCBEiRIgQIYITLn4DC2aGi0liAy0AAAAASUVORK5CYII=" alt="bot">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">AI Health Support</h4>
+                        <p class="chatbox__description--header">Tell me everything about your health </p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div class="messages__item messages__item--visitor">Hi, How do you do? What brought you here today?</div>
+                </div>
+                <div class="messages__item messages__item--visitor" id="loader" style="opacity: 0;"></div>
+                <div class="chatbox__footer" id="inputContent">
+                    <input type="text" placeholder="Write a message..." id="inputMsg">
+                    <button name="findDoctor" id="findDoctor">
+                        <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/search--v1.png" alt="search--v1"/>
+                    </button>
+                    <button class="chatbox__send--footer send__button" id="sendButton">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+            </div>
+            
+        </div>
+    </div>
 
 <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
