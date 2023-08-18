@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, g
+from flask import Flask, render_template, request, jsonify, session, redirect
 from flask_session import Session
-from backend_utilities import get_response, addSystemMessage, send_email, search_doctors
-#from twilio.twiml.messaging_response import MessagingResponse
-
+from backend_utilities import get_response, addSystemMessage, send_email, getDoctor
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret_key!'
@@ -16,6 +15,8 @@ def index():
     # Each time refreshing the webpage:
     session.pop('category', None) # clear the category in session
     session.pop('consentOfAppt', None) # clear the consentOfAppt in session
+    session.pop('categoryRecom', None) # clear the categoryRecom in session
+    session.pop('scheduledTime', None) # clear the scheduledTime in session
     #session.pop('formFilled', None) # clear the formFilled in session
     return render_template('form.html')
 
@@ -71,25 +72,34 @@ def chat():
             else: # cases that user input is not y or n
                 return jsonify({'answer': "If you want to make a Appt., enter y to continue"}), 200
         elif session.get('consentOfAppt') == 'y': # input is the available time, may be we need widget later
-            ctgy = session.get('category') # predicted category
-            addrs = session.get('address') # address
-            receiver_email = session.get('email')
-            reason = session.get('cateReasoning')
-            # Searching for the doctors
-            dr_recom = search_doctors(ctgy, addrs)
-            dr_name = dr_recom[0]
-            dr_address = dr_recom[1]
-            if dr_name =='error':
-                return jsonify({'answer': "Ops, some errors happens!"}), 200
-            # send email to the patient
-            subject = f'Confirmed with your appointment with {dr_name} <br>Address:{dr_address} <br>Time: {text}' 
-            mailbody = f"""{reason} \n\n  Here is the doctor we recommend: \n     Doctor Name: {dr_name}\n     Address: {dr_address} \n     We checked the doctor is avaiable at time: {text}
-                """
-            successSend=send_email(receiver_email, subject, mailbody)
-            if successSend=='success':
-                return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later. You are all set, goodbye!"}), 200
+            if session.get('categoryRecom') is None:
+                session['scheduledTime'] = text
+                ctgy = session.get('category') # predicted category
+                path= os.path.dirname(os.path.abspath(__name__))
+                # Searching for the doctors
+                dr_recom = getDoctor(ctgy, path)
+                session['categoryRecom'] = dr_recom['doctors']
+                return jsonify({'answer': dr_recom['reply'],'dotcorList':dr_recom['doctors']})
             else:
-                return jsonify({'answer': "Ops, some errors happens with send email"}), 200
+                receiver_email = session.get('email')
+                choosedCate = session.get('categoryRecom')
+                reason = session.get('cateReasoning')
+                time = session.get('scheduledTime')
+                for doctor1 in choosedCate:
+                    if doctor1['Name'] == text:
+                        dr_address = doctor1[2]
+                dr_name = text
+                if dr_name =='error':
+                    return jsonify({'answer': "Ops, some errors happens!"}), 200
+                # send email to the patient
+                subject = f'Confirmed with your appointment with {dr_name} <br>Address:{dr_address} <br>Time: {time}' 
+                mailbody = f"""{reason} \n\n  Here is the doctor we recommend: \n     Doctor Name: {dr_name}\n     Address: {dr_address} \n     We checked the doctor is avaiable at time: {time}
+                    """
+                successSend=send_email(receiver_email, subject, mailbody)
+                if successSend=='success':
+                    return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later. You are all set, goodbye!"}), 200
+                else:
+                    return jsonify({'answer': "Ops, some errors happens with send email"}), 200
         else:  #session.get('consentOfAppt') == 'n'
             session.pop('consentOfAppt', None) # clear the category in session
             return jsonify({'answer': "Ops, some errors happens!If you want to make a Appt., enter y to continue"}), 200

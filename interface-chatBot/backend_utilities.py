@@ -6,6 +6,7 @@ from serpapi import GoogleSearch
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 
+import json
 import smtplib
 import ssl
 import sys
@@ -42,7 +43,7 @@ def send_email(receiver_email, subject, message):
     return 'success'
 
    
-
+"""
 def do_geocode(address):
     geopy = Nominatim(user_agent="app")
     try:
@@ -57,15 +58,6 @@ def do_googleSearch(params):
     except Exception as e:
         return {"error": str(e)}
     
-"""
- Returns are the doctor's name and address, both are strings. \
-    use this when the agent want to help user to make an appointment with a doctor and \
-    after the user provide the one's address, \
-    The inputs are two variables, first one is doctorType: str, \
-    second one is address: str.\
-    it also return errors if Missing required parameters \
-    or Geocoding failed. Invalid address or API error
-"""        
 def search_doctors(doctorType: str, address: str):
     top_k = 1
     if not doctorType or not address:
@@ -98,7 +90,7 @@ def search_doctors(doctorType: str, address: str):
         return doctors[0]['name'], doctors[0]['address']
     else:
         return 'error', 'Geocoding failed. Invalid address or API error.'
-
+"""
 class DoctorCategoryAssistant:
     def __init__(self):
 
@@ -256,3 +248,17 @@ def get_response(msg):
         return {'reply':assistant_reply, 'category':predicted_category, 'followMsg':tmpMsg}
     return {'reply':assistant_reply}
 
+def getDoctor(category: str, file_path:str):
+    
+    # Construct the full path to the JSON file
+    path =  file_path
+    # open the text1.json file
+    with open(f'{path}/test1.json') as json_file:
+        data = json.load(json_file)
+    doctors = data[category]
+    if doctors:
+        return {'reply':f'Here are some doctors for {category}', 'doctors':doctors}
+    else:
+        doctors=data['General Practice or Family Medicine']
+        return {'reply':f'Sorry, we do not have any doctor for {category}, we recommend you to see a General Practitioner', 'doctors':doctors}
+        

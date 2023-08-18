@@ -59,6 +59,7 @@ body {
   /* Styling for textareas and textboxes */
   .doctorInfo textarea, input[type="text"] {
     width: 500px; /* Adjust the width as needed */
+    height: auto;
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
