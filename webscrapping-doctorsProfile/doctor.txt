@@ -180,6 +180,13 @@ Address: 5858 W. Main Street, Frisco, TX
 Hospital Affiliations: Dallas Medical Center, Dallas, TX; Medical City Plano, Plano, TX
 Education & Experience:Howard University, Fellowship, Hematology and Medical Oncology, 2011-2014;Texas Tech University (Permian Basin),Residency, Internal Medicine, 2008-2011;B. J. Medical College Ahmedabad,Medical School
 Certifications & Licensure: American Board of Internal Medicine,Certified in Hematology;American Board of Internal Medicine,Certified in Internal Medicine;American Board of Internal Medicine,Certified in Medical Oncology;VA State Medical License,Active through 2014;DC State Medical License,Active through 2014;MD State Medical License,Active through 2014; TX State Medical License,Active through 2024
+9
+Name: Dr. Sashidhar N. Reddy MD
+Link: https://health.usnews.com/doctors/sashidhar-reddy-86122
+Address: 1105 Central Expy N, Allen, TX
+Hospital Affiliations: Texas Health Presbyterian Hospital Allen;Baylor Scott and White Institute for Rehabilitation-Dallas;Baylor Scott and White Medical Center-Plano
+Education & Experience: Virginia Commonwealth University Health System,Fellowship, Hematology and Medical Oncology, 2004-2006;Virginia Commonwealth University Health System,Residency, Internal Medicine, 1994-1997;University of Texas Medical Branch School of Medicine,Medical School
+Certifications & Licensure: American Board of Internal Medicine,Certified in Medical Oncology;TX State Medical License,Active through 2024;VA State Medical License,Active through 2008
 10
 Name:Dr. Wyatt Rousseau
 Link:https://health.usnews.com/doctors/wyatt-rousseau-29522
@@ -194,6 +201,13 @@ Address: 6130 W Parker Rd, Plano, TX
 Hospital Affiliations: Children's Medical Center DallasDallas, TX
 Education & Experience: Children's Hospital/Boston Medical Center,Fellowship, Pediatric Pulmonology, 1993-1996;Baylor College of Medicine (Houston),Residency, Pediatrics, 1990-1993;Lewis Katz School of Medicine at Temple University,Medical School
 Certifications & Licensure: American Board of Pediatrics,Certified in Pediatric Pulmonology;TX State Medical License,Active through 2024;MA State Medical License, Active through 1998
+10
+Name: Dr. Mark A. Co MD
+Link: https://health.usnews.com/doctors/mark-co-3288147
+Address: 1 Medical Parkway, Plaza 1, Dallas, TX
+Hospital Affiliations: Dallas Medical CenterDallas, TX
+Education & Experience: New York-Presbyterian/Queens,Residency, Internal Medicine, 1983-1986;Cebu Institute of Medicine,Medical School,Rutgers New Jersey Medical School,Fellowship, Pulmonary Disease, 1988-1989
+Certifications & Licensure: American Board of Internal Medicine,Certified in Critical Care Medicine;American Board of Internal Medicine,Certified in Internal Medicine;American Board of Internal Medicine,Certified in Pulmonary Disease;TX State Medical License,Active through 2023
 11
 Name: Thom Allen
 Link: https://www.psychologytoday.com/us/therapists/thom-allen-plano-tx/69677
@@ -215,6 +229,13 @@ Address: 730 E park Blvd, Plano, TX
 Hospital Affiliations: Parkland Health-DallasDallas, TX
 Education & Experience: University of Texas Southwestern Medical Center,Residency, Psychiatry, 1995-1997; J.J.M. Medical College,Medical School
 Certifications & Licensure: IN State Medical License, Active through 2023; TX State Medical License, Active through 2024
+12
+Name: Dr. Arthur N. Westover MD
+Link: https://health.usnews.com/doctors/arthur-westover-454985
+Address: 3030 Waterview Pkwy, Richardson, TX
+Hospital Affiliations: UT Southwestern Medical Center
+Education & Experience:University of Texas Southwestern Medical Center,Residency, Psychiatry, 2002-2006;Baylor College of Medicine,Medical School
+Certifications & Licensure:American Board of Psychiatry and Neurology,Certified in Psychiatry;TX State Medical License,Active through 2023
 13
 Name:Dr. Supriya Sehgal
 Link:https://health.usnews.com/doctors/supriya-sehgal-625244
@@ -229,6 +250,13 @@ Address: 6300 Stonewood Dr, Plano, TX
 Hospital Affiliation: Medical City DallasDallas, TX
 Education & Experience: UPMC Medical Education, Fellowship, Rheumatology, 1994-1996; Allegheny Health Network Medical Education Consortium (AGH), Residency, Internal Medicine, 1991-1994; Dow University of Health Sciences, Medical School
 Certifications & Licensure:American Board of Internal Medicine, Certified in Rheumatology; CA State Medical License, Active through 2023; TX State Medical License,Active through 2024
+13
+Name:Dr. John P. Laver MD
+Link:https://health.usnews.com/doctors/john-lavery-345978
+Address: 997 Raintree Cir, Allen, TX;
+Hospital Affiliations:Texas Health Presbyterian Hospital Allen;Baylor Scott and White Institute for Rehabilitation-Dallas;Medical City McKinney;Medical City Plano
+Education & Experience:Universidad de Guadalajara,Medical School;University of Tennessee,Fellowship, Allergy and Immunology, 1987-1989;St Agnes HealthCare,Residency, Internal Medicine, 1984-1987;University of Texas Medical Branch Hospitals,Fellowship, Rheumatology, 1989-1991
+Certifications & Licensure:American Board of Internal Medicine,Certified in Internal Medicine;American Board of Internal Medicine,Certified in Rheumatology;NJ State Medical License,Active through 1988;MD State Medical License,Active through 1992;TX State Medical License,Active through 2023;AR State Medical License,Active through 1999;TN State Medical License,Active through 1997
 14
 Name:Dr. Lori E. Coors 
 Link:https://health.usnews.com/doctors/lori-coors-149763
@@ -243,6 +271,13 @@ Address: 4100 W. 15th Street, Suite 202, Plano, TX
 Hospital Affiliations: No Affiliation
 Education & Experience: University of Texas Health Science Center at Houston, Fellowship, Endocrinology, Diabetes, and Metabolism, 2009-2011; Emory University School of Medicine, Residency, Internal Medicine, 2006-2009; Medical College of Georgia, Medical School,BS, Chemical Engineering, 1995-1999
 Certifications & Licensure:TX State Medical License, Active through 2025
+14
+Name: Dr. Daniel Wong MD
+Link:https://health.usnews.com/doctors/daniel-wong-58374
+Address:7217 Telecom Pkwy, Garland, TX
+Hospital Affiliations: Sutter Medical Center,Sacramento, CA
+Education & Experience:University of New Mexico School of Medicine,Residency, Internal Medicine, 2007-2010;Lewis Katz School of Medicine at Temple University,Medical School;University of Florida,Fellowship, Endocrinology, Diabetes, and Metabolism, 2010-2012
+Certifications & Licensure:American Board of Internal Medicine,Certified in Endocrinology, Diabetes and Metabolism;American Board of Internal Medicine,Certified in Internal Medicine;GA State Medical License,Active through 2013;NM State Medical License,Active through 2012;CA State Medical License,Active through 2024;TX State Medical License,Active through 2024
 15
 Name:Dr. Debra Ouyang
 Link:https://health.usnews.com/doctors/debra-ouyang-714887
@@ -257,3 +292,10 @@ Address: 1645 Dorchester Dr, Plano, TX
 Hospital Affiliations: Medical City Plano, Plano, TX
 Education & Experience: University of California (San Francisco), Residency, Ophthalmology, 1969-1973; University of Southern California/LACUSC Medical Center, Internship, Transitional Year, 1968-1969; University of California (San Francisco) School of Medicine, Medical School
 Certifications & Licensure: American Board of Ophthalmology, Certified in Ophthalmology; CA State Medical License, Active through; TX State Medical License, Active through 2023
+15
+Name: Dr. James A. Passmore
+Link:https://health.usnews.com/doctors/james-passmore-120957
+Address:4100 West 15th Street, Plano, TX
+Hospital Affiliations: Medical City Lewisville; Texas Health Presbyterian Hospital Dallas
+Education & Experience:Mayo Clinic College of Medicine and Science (Rochester),Residency, Ophthalmology, 1970-1973; Mayo Clinic College of Medicine and Science (Rochester),Residency, Surgery, 1969-1970; Baylor College of Medicine,Internship, Transitional Year, 1968-1969; Baylor College of Medicine,Medical School
+Certifications & Licensure: American Board of Ophthalmology,Certified in Ophthalmology;TX State Medical License,Active through 2025;MN State Medical License,Active through 1988
