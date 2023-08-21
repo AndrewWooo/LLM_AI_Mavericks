@@ -65,7 +65,7 @@ def chat():
             if text.lower() == 'y' or text.lower() == 'yes':
                 session['consentOfAppt'] = 'y'
                 # let user input avaiable time
-                return jsonify({'answer': "Please enter your avaible time", 'calendar':"openCalendar"}), 200
+                return jsonify({'answer': "Please enter your avaible time:", 'calendar':"openCalendar"}), 200
             elif text.lower() == 'n' or text.lower() == 'no':
                 session['consentOfAppt'] = 'n'
                 return jsonify({'answer': "Goodbye!"}), 200
@@ -79,23 +79,25 @@ def chat():
                 # Searching for the doctors
                 dr_recom = getDoctor(ctgy, path)
                 session['categoryRecom'] = dr_recom['doctors']
-                return jsonify({'answer': dr_recom['reply'],'dotcorList':dr_recom['doctors']})
+                return jsonify({'answer': dr_recom['reply'],'doctorList':dr_recom['doctors']})
             else:
                 receiver_email = session.get('email')
                 choosedCate = session.get('categoryRecom')
                 reason = session.get('cateReasoning')
                 time = session.get('scheduledTime')
                 for doctor1 in choosedCate:
-                    if doctor1['Name'] == text:
-                        dr_address = doctor1[2]
+                    if doctor1['Name'][0] == text:
+                        dr_address = doctor1['Address'][0]
+                        break
                 dr_name = text
                 if dr_name =='error':
                     return jsonify({'answer': "Ops, some errors happens!"}), 200
                 # send email to the patient
-                subject = f'Confirmed with your appointment with {dr_name} <br>Address:{dr_address} <br>Time: {time}' 
+                subject = f'Confirmed with your appointment with {dr_name} <br>Address:{dr_address} <br>Time: {time}'
+                subject1 = f'Confirmed with your appointment with {dr_name};  Address:{dr_address};  Time: {time}' 
                 mailbody = f"""{reason} \n\n  Here is the doctor we recommend: \n     Doctor Name: {dr_name}\n     Address: {dr_address} \n     We checked the doctor is avaiable at time: {time}
                     """
-                successSend=send_email(receiver_email, subject, mailbody)
+                successSend=send_email(receiver_email, subject1, mailbody)
                 if successSend=='success':
                     return jsonify({'answer': subject,'additionalInfo':"A reminder email will be sent to you later. You are all set, goodbye!"}), 200
                 else:

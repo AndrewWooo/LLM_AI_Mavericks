@@ -17,31 +17,64 @@ body {
 }
 
 *, html {
-    --primaryGradient: linear-gradient(93.12deg, #7FFFD4 0.52%, #00FFFF 100%);
-    --secondaryGradient: linear-gradient(268.91deg, #7FFFD4 -2.14%, #00FFFF 99.69%);
+    --primaryGradient: linear-gradient(93.12deg, #4169E1 0.52%, #6495ED 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #4169E1 -2.14%, #6495ED 1.69%);
     --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --primary: #7FFFD4;
+    --primary: #4169E1;
 }
 /*DoctorInfo
 ==============*/
-.doctorInfo{
+#accordionBox{
     margin: 0 auto;
-    width: 450px;
-    padding: 20px;
+    width: 600px;
+    /*padding: 8px;*/
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px #aaa;
-    margin-top: 100px;
-    margin-left: 80px;
+    margin-top: 65px;
+    margin-left: 35px;
     opacity: 0;
 }
-.doctorInfo h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+#accordionBox .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  .accordion:after {
+    content: '\002B';  /* Unicode 字符 + 号 */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+   
+  .active:after { 
+    content: "\2212";  /* Unicode 字符 - 号 */
+  }
+.doctorInfo{
+    width: 98%;
+    margin-top: 6px;
+    margin-left: 7px;
+    /*border-radius: 10px;
+    padding: 1px;
+    box-shadow: 0 0 10px #aaa;*/
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
 
   /* Add CSS style to left-align labels and textboxes */
   .label-container {
@@ -50,7 +83,7 @@ body {
     margin-bottom: 10px;
   }
   .doctorInfo label {
-    width: 200px;
+    width: 150px;
     font-weight: bold;
     color: #555;
     text-align: left;
@@ -58,18 +91,17 @@ body {
 
   /* Styling for textareas and textboxes */
   .doctorInfo textarea, input[type="text"] {
-    width: 500px; /* Adjust the width as needed */
+    width: 550px; /* Adjust the width as needed */
     height: auto;
-    padding: 10px 12px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
+    font-weight: 400;
+    font-family: auto;
   }
-  #addressTextbox {
-    min-height: 100px;
-    resize: vertical;
-  }
+  
 /* CHATBOX
 =============== */
 .chatbox {
@@ -174,13 +206,13 @@ body {
 }
 
 .chatbox__heading--header {
-    font-size: 1.2rem;
-    color: black;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .chatbox__description--header {
-    font-size: .9rem;
-    color: black;
+    font-size: 1.1rem;
+    color: white;
 }
 
 /* Messages */
@@ -190,7 +222,7 @@ body {
 
 .messages__item {
     margin-top: 10px;
-    background: rgb(117, 255, 255);
+    background: rgb(228, 230, 230);
     padding: 8px 12px;
     max-width: 70%;
 }
@@ -206,7 +238,7 @@ body {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    background: var(--primary);
+    background: white;
     color: black;
 }
 
@@ -237,9 +269,9 @@ body {
     cursor: pointer;
 }
 .chatbox__send--footer {
-    color: black;
-    font-size: 1rem;
-    font-weight: 400;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 800;
     margin-right: 35px;
 }
 
