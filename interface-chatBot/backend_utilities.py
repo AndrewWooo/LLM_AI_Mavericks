@@ -254,7 +254,7 @@ def getDoctor(category: str, file_path:str):
     # Construct the full path to the JSON file
     path =  file_path
     # open the text1.json file
-    with open(f'{path}/test1.json') as json_file:
+    with open(f'{path}/doctor_info.json') as json_file:
         data = json.load(json_file)
     doctors = data[category]
     if doctors:
