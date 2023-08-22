@@ -11,4 +11,6 @@ Type "source text.sh" and "export OPENAI_API_KEY='your_open_ai_key'" in the cons
 3.go to port http://127.0.0.1:8080/, click 'get started' button, to fill out a form. and start chatting with the chatting bot! Ask your health concerns and so on.
 
 
+if just want to test out at terminal: 
 chatbot-backend/in_context_learning-msg-interactive.py can run at terminal independently. 
+chatbot-backend/backend_utilities.py is the utilities file called by in_context_learning-msg-interactive.py
